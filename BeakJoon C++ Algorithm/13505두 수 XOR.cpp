@@ -21,7 +21,7 @@ public:
 	void insert(bitset<32> a, int counter) {
 		now = a[counter];
 		if (counter == 0) return;
-		
+
 		int nextNode = a[counter - 1];
 		if (!next[nextNode])
 			next[nextNode] = new Trie;
@@ -30,20 +30,31 @@ public:
 	int query(bitset<32> a, int counter) {
 		// 내가 트리상에 존재 함으로 NULL값은 걱정 하지 않는다.
 		if (counter == 0) return 0;
-		
+
 		int nextNode = !a[counter - 1];
 		if (next[nextNode]) {
 			return next[nextNode]->query(a, counter - 1) + (1 << counter - 1);
 		}
-		else 
+		else
 			return next[!nextNode]->query(a, counter - 1);
 	}
+	/*void print(int counter) {
+		cout << now;
+		if (counter == 0) {
+			cout << endl;
+			return;
+		}
+		if (next[0]) next[0]->print(counter - 1);
+		if (next[1]) next[1]->print(counter - 1);
+	}*/
 };
 
 Trie root;
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int n, ans = 0, tmp;
 	cin >> n;
 	a.resize(n);
@@ -52,6 +63,7 @@ int main()
 		a[i] = tmp;
 		root.insert(a[i], 31);
 	}
+	//root.print(31);
 	for (int i = 0; i < n; i++)
 		ans = max(ans, root.query(a[i], 31));
 	cout << ans << '\n';
