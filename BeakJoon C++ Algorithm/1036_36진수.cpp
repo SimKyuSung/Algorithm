@@ -21,7 +21,6 @@ int main()
 	/* 1. init, input */
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-
 	for (int i = 0; i < 36; i++)
 		ch[i] = i;
 	int n, k, mSize = 0;
@@ -64,7 +63,7 @@ int main()
 			carry /= 36;
 		}
 	}
-	
+
 	/* 3. 합계 소팅*/
 	for (int i = 0; i < 34; i++) {
 		int tmp = i;
@@ -114,7 +113,7 @@ bool cmp(vector <int> a, vector <int> b) {
 	// b가 더 크면 return true;
 	if (a.size() != b.size())
 		return a.size() < b.size();
-	
+
 	for (int i = b.size() - 1; i >= 0; i--) {
 		if (a[i] != b[i])
 			return a[i] < b[i];
