@@ -7,12 +7,8 @@
 
 using namespace std;
 
-// 인풋저장
-vector < vector <int> > base36;
-
-// 합계저장
-vector < vector <int> > base36sum;
-vector <int> ch(36);
+vector < vector <int> > base36, base36sum(35);
+vector <int> ans, ch(36);
 
 bool cmp(vector <int>, vector <int>);
 
@@ -27,7 +23,6 @@ int main()
 	string tmp;
 	cin >> n;
 	base36.resize(n);
-	base36sum.resize(36);
 	for (int i = 0; i < n; i++) {
 		cin >> tmp;
 		mSize = max(mSize, (int)tmp.length());
@@ -43,7 +38,7 @@ int main()
 	}
 
 	/* 2. 0 ~ 35를 35로 바꾼뒤 합계 */
-	for (int b = 0; b < 36; b++) {
+	for (int b = 0; b < 35; b++) {
 		int sum, carry = 0;
 		for (int j = 0; j < mSize; j++) {
 			sum = carry;
@@ -120,25 +115,3 @@ bool cmp(vector <int> a, vector <int> b) {
 	}
 	return true;
 }
-
-
-
-/*
-0 ~ 35 중 어떤 숫자를 바꾸면 좋은지 계산해서 소팅한다.
-
-5
-GOOD
-LUCK
-AND
-HAVE
-FUN
-7
-
-DOOG
-KCUL
-AND
-EVAH
-NUF
-
-
-*/
