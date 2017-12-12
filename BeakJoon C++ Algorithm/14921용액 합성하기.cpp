@@ -9,6 +9,8 @@ int a[100001];
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
 	int n, ans = 210000000;
 	cin >> n;
 	for (int i = 0; i < n; i++)
@@ -23,5 +25,5 @@ int main()
 		if (abs(ans) > abs(x))
 			ans = x;
 	}
-	cout << ans << endl;
+	cout << ans;
 }
