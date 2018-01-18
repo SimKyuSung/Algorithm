@@ -34,6 +34,7 @@ int main()
 				j = i;
 			}
 		}
+		// 설치한 공유기가 더 적으면 간격이 너무 간격을 넓게 설치함 -> 더 좁게 만들어 준다.
 		if (cnt < c)	right = mid - 1;
 		else			left = mid + 1;
 	}
