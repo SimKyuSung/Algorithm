@@ -1,4 +1,4 @@
-/// 13459째로탈출
+/// 13460째로탈출2
 
 #include <iostream>
 #include <vector>
@@ -135,5 +135,5 @@ int main()
 			}
 		}
 	}
-	cout << 0;
+	cout << -1;
 }
