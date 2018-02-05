@@ -13,43 +13,31 @@ class Trie {
 public:
 	// left, right 2진 트리 (0, 1)
 	Trie *next[2];
-	int now = 0;
-	Trie() {
-		next[0] = NULL;
-		next[1] = NULL;
-	}
-	void insert(bitset<32> a, int counter) {
-		now = a[counter];
-		if (counter == 0) return;
-
-		int nextNode = a[counter - 1];
-		if (!next[nextNode])
-			next[nextNode] = new Trie;
-		next[nextNode]->insert(a, counter - 1);
-	}
-	int query(bitset<32> a, int counter) {
-		// 내가 트리상에 존재 함으로 NULL값은 걱정 하지 않는다.
-		if (counter == 0) return 0;
-
-		int nextNode = !a[counter - 1];
-		if (next[nextNode]) {
-			return next[nextNode]->query(a, counter - 1) + (1 << counter - 1);
-		}
-		else
-			return next[!nextNode]->query(a, counter - 1);
-	}
-	/*void print(int counter) {
-		cout << now;
-		if (counter == 0) {
-			cout << endl;
-			return;
-		}
-		if (next[0]) next[0]->print(counter - 1);
-		if (next[1]) next[1]->print(counter - 1);
-	}*/
+	void insert(bitset<32>, int);
+	int query(bitset<32>, int);
 };
 
 Trie root;
+int nc = 0;
+Trie node[3000010];
+
+void Trie::insert(bitset<32> a, int counter) {
+	if (counter == 0) return;
+	int nextNode = a[counter - 1];
+	if (!next[nextNode])
+		next[nextNode] = &node[nc++];
+	next[nextNode]->insert(a, counter - 1);
+}
+int Trie::query(bitset<32> a, int counter) {
+	// 내가 트리상에 존재 함으로 NULL값은 걱정 하지 않는다.
+	if (counter == 0) return 0;
+
+	int nextNode = !a[counter - 1];
+	if (next[nextNode])
+		return next[nextNode]->query(a, counter - 1) + (1 << counter - 1);
+	else
+		return next[!nextNode]->query(a, counter - 1);
+}
 
 int main()
 {
