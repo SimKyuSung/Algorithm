@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 3456. 직사각형 길이 찾기
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,8 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
-
-		cout << '#' << t << ' ' << ans << endl;
+		int a, b, c;
+		cin >> a >> b >> c;
+		cout << '#' << t << ' ' << (a ^ b ^ c) << '\n';
 	}
 }

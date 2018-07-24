@@ -1,59 +1,24 @@
 /// 13460째로탈출2
 
 #include <iostream>
-#include <vector>
 #include <queue>
+
+#define endl '\n'
 
 using namespace std;
 
 char maze[10][10];
 bool dp[10][10][10][10];
-// 남, 북, 서, 동
-int dx[4] = { 0, 0, -1, 1 };
-int dy[4] = { 1, -1, 0, 0 };
 
-struct coor
-{
-	int turn;
-	int rY, rX;
-	int bY, bX;
+// 남, 북, 서, 동
+const short dx[4] = { 0, 0, -1, 1 };
+const short dy[4] = { 1, -1, 0, 0 };
+
+struct coor {
+	short rY, rX, bY, bX, d;
 };
 
 queue <coor> q;
-
-pair<coor, bool> moveRed(int d, coor now) {
-	int &x = now.rX;
-	int &y = now.rY;
-	maze[now.bY][now.bX] = 'B';
-	while (maze[y + dy[d]][x + dx[d]] == '.') {
-		y += dy[d];
-		x += dx[d];
-	}
-	maze[now.bY][now.bX] = '.';
-	if (maze[y + dy[d]][x + dx[d]] == 'O') {
-		y = 0;
-		x = 0;
-		return { now, true };
-	}
-	else									return { now, false };
-}
-
-pair<coor, bool> moveBlue(int d, coor now) {
-	int &x = now.bX;
-	int &y = now.bY;
-	maze[now.rY][now.rX] = 'R';
-	while (maze[y + dy[d]][x + dx[d]] == '.') {
-		y += dy[d];
-		x += dx[d];
-	}
-	maze[now.rY][now.rX] = '.';
-	if (maze[y + dy[d]][x + dx[d]] == 'O') {
-		y = 0;
-		x = 0;
-		return { now, true };
-	}
-	else									return { now, false };
-}
 
 int main()
 {
@@ -63,7 +28,6 @@ int main()
 	int n, m;
 	cin >> n >> m;
 	coor init;
-	init.turn = 0;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cin >> maze[i][j];
@@ -80,60 +44,69 @@ int main()
 		}
 	}
 
+	init.d = -1;
+	dp[init.rY][init.rX][init.bY][init.bX] = 1;
 	q.push(init);
-	dp[init.rY][init.rX][init.bY][init.bX] = true;
 
+	int ans = 0;
 	while (!q.empty()) {
-		coor now = q.front();
-		q.pop();
-		/*
-		cout << "Red\t" << now.rY << " " << now.rX << endl;
-		cout << "Blue\t" << now.bY << " " << now.bX << endl;
-		cout << endl;
-		*/
+		int qSize = q.size();
+		ans++;
 
-		// 움직인 횟수가 10번 이상이라면 중단!
-		if (now.turn < 10) {
-			for (int d = 0; d < 4; d++) {
-				pair <coor, bool> tmp;
-				coor next = now;
-				// 공움직임 순서 정하기
-				int red = now.rX * dx[d] + now.rY * dy[d];
-				int blue = now.bX * dx[d] + now.bY * dy[d];
+		if (ans > 10) {
+			cout << -1 << endl;
+			return 0;
+		}
+		for (int i = 0; i < qSize; i++) {
+			coor now = q.front();
+			q.pop();
+			for (short d = 0; d < 4; d++) {
+				if (now.d == d) continue;
 
-				// 값이 큰쪽이 기울이는 방향에 더 가까움으로 먼저 움직임
-				if (red > blue) {
-					tmp = moveRed(d, next);
-					next = tmp.first;
-					red = tmp.second;
+				short ry = now.rY, rx = now.rX, by = now.bY, bx = now.bX;
+				int bCounter = 0, rCounter = 0;
 
-					tmp = moveBlue(d, next);
-					next = tmp.first;
-					blue = tmp.second;
+				// 1. 파란공 움직이기
+				while (maze[by][bx] == '.') {
+					by += dy[d];
+					bx += dx[d];
+					bCounter++;
 				}
-				else {
-					tmp = moveBlue(d, next);
-					next = tmp.first;
-					blue = tmp.second;
+				if (maze[by][bx] == 'O')
+					continue;
+				by -= dy[d];
+				bx -= dx[d];
 
-					tmp = moveRed(d, next);
-					next = tmp.first;
-					red = tmp.second;
+				// 2. 빨간공 움직이기
+				while (maze[ry][rx] == '.') {
+					ry += dy[d];
+					rx += dx[d];
+					rCounter++;
 				}
-
-				if (red == 1 && blue == 0) {
-					cout << next.turn + 1;
+				if (maze[ry][rx] == 'O') {
+					cout << ans << endl;
 					return 0;
 				}
-				// 그전에 방문한적이 없고, 블루홀이 아니라면 큐에 넣는다.
-				bool &nowState = dp[next.rY][next.rX][next.bY][next.bX];
-				if (blue != 1 && !nowState) {
-					next.turn++;
-					q.push(next);
-					nowState = true;
+				ry -= dy[d];
+				rx -= dx[d];
+
+				// 3. 같은 위치에 있다면 많이 움직인 친구를 뒤로 보냄
+				if (ry == by && rx == bx) {
+					if (bCounter > rCounter) {
+						by -= dy[d];
+						bx -= dx[d];
+					}
+					else {
+						ry -= dy[d];
+						rx -= dx[d];
+					}
+				}
+				if (!dp[ry][rx][by][bx]) {
+					dp[ry][rx][by][bx] = 1;
+					q.push({ ry, rx, by, bx, d });
 				}
 			}
 		}
 	}
-	cout << -1;
+	cout << -1 << endl;
 }

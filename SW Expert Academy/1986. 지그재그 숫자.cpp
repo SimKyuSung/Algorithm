@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 1986. 지그재그 숫자
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,20 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
+		long long n;
 		cin >> n;
 
-		cout << '#' << t << ' ' << ans << endl;
+		if (n % 2)	n = n / 2 + 1;
+		else		n = n / -2;
+
+		cout << '#' << t << ' ' << n << '\n';
 	}
 }
+
+/*
+홀수항
+1 3 5 7
+
+짝수항 
+-2 -4 -6
+*/

@@ -3,13 +3,14 @@
 #include <iostream>
 #include <vector>
 #include <queue>
+#include <bitset>
 
 using namespace std;
 
 int n, m;
 
 vector <vector <char> > maze;
-vector <vector < vector <bool> > > ch;
+vector <vector < bitset<255> > > ch;
 
 int dx[4] = { 0, 0, 1, -1 };
 int dy[4] = { 1, -1, 0, 0 };
@@ -29,14 +30,14 @@ int main()
 
 	cin >> n >> m;
 	maze.resize(n, vector <char>(m));
-	ch.resize(n, vector <vector<bool> >(m, vector <bool>(64, true)));
+	ch.resize(n, vector < bitset<255> >(m, bitset<255>(0)));
 
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			cin >> maze[i][j];
 			if (maze[i][j] == '0') {
 				q.push({ j, i, 0, 0 });
-				ch[i][j][0] = false;
+				maze[i][j] = '.';
 			}
 		}
 	}
@@ -50,27 +51,36 @@ int bfs() {
 		int key = q.front().key;
 		int cnt = q.front().cnt + 1;
 		q.pop();
-		// cout << xx << " " << yy << " " << key << " " << cnt - 1 << endl;
 		for (int i = 0; i < 4; i++) {
 			int x = xx + dx[i];
 			int y = yy + dy[i];
+			int nextKey = key;
+
 			if (y < 0 || n <= y || x < 0 || m <= x || maze[y][x] == '#')
 				continue;
 			else if ('A' <= maze[y][x] && maze[y][x] <= 'F') {
-				if (((key >> (maze[y][x] - 'A')) & 1) == 0)
+				if (((nextKey >> (maze[y][x] - 'A')) & 1) == 0)
 					continue;
 			}
 			else if ('a' <= maze[y][x] && maze[y][x] <= 'f') {
-				key |= 1 << (maze[y][x] - 'a');
+				nextKey |= (1 << (maze[y][x] - 'a'));
 			}
 			else if (maze[y][x] == '1') {
 				return cnt;
 			}
-			if (ch[y][x][key]) {
-				q.push({ x, y, key, cnt });
-				ch[y][x][key] = false;
+
+			// 다른키를 가지고 있으면 푸쉬
+			if (!ch[y][x][nextKey]) {
+				q.push({ x, y, nextKey, cnt });
+				ch[y][x][nextKey] = 1;
 			}
 		}
 	}
 	return -1;
 }
+
+/*
+tc
+
+
+*/

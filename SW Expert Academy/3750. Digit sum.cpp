@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 3750. Digit sum
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,18 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
+		size_t n, nn;
 		cin >> n;
 
-		cout << '#' << t << ' ' << ans << endl;
+		while (n > 9) {
+			nn = 0;
+			while (n) {
+				nn += n % 10;
+				n /= 10;
+			}
+			n = nn;
+		}
+
+		cout << '#' << t << ' ' << n << '\n';
 	}
 }

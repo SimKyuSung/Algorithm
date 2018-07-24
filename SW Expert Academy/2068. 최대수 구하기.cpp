@@ -1,8 +1,7 @@
-/// SW Expert Academy
+/// 2068. 최대수 구하기
 
 #include <iostream>
-
-#define endl '\n'
+#include <algorithm>
 
 using namespace std;
 
@@ -16,8 +15,10 @@ int main()
 
 	for (int t = 1; t <= testCase; t++) {
 		int n, ans = 0;
-		cin >> n;
-
-		cout << '#' << t << ' ' << ans << endl;
+		for (int i = 0; i < 10; i++) {
+			cin >> n;
+			ans = max(ans, n);
+		}
+		cout << '#' << t << ' ' << ans << '\n';
 	}
 }

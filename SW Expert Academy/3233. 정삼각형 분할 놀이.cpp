@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 3233. Á¤»ï°¢Çü ºÐÇÒ ³îÀÌ
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,9 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
-
-		cout << '#' << t << ' ' << ans << endl;
+		size_t a, b, n;
+		cin >> a >> b;
+		n = a / b;
+		cout << '#' << t << ' ' << n * n << '\n';
 	}
 }

@@ -39,31 +39,31 @@ int main()
 			for (int j = 0; j < 6; j++) {
 				string line;
 				cin >> line;
-				int input1 = 0, input2 = 0;
+				int cin1 = 0, cin2 = 0;
 
 				if (line[0] != '-')
-					input1 = line[0] - '0';
+					cin1 = line[0] - '0';
 				if (line.size() > 1) {
 					f[i][j] = true;
 					if (line[2] != '-')
-						input2 = line[2] - '0';
+						cin2 = line[2] - '0';
 				}
 				else
 					c4[i][j][1] = true;
 
-				s[i][j][0] = input1;
-				s[i][j][1] = input2;
+				s[i][j][0] = cin1;
+				s[i][j][1] = cin2;
 
-				if (input1) {
-					c1[i][input1 - 1] = true;
-					c2[j][input1 - 1] = true;
-					c3[i / 2][j / 3][input1 - 1] = true;
+				if (cin1) {
+					c1[i][cin1 - 1] = true;
+					c2[j][cin1 - 1] = true;
+					c3[i / 2][j / 3][cin1 - 1] = true;
 					c4[i][j][0] = true;
 				}
-				if (input2) {
-					c1[i][input2 - 1] = true;
-					c2[j][input2 - 1] = true;
-					c3[i / 2][j / 3][input2 - 1] = true;
+				if (cin2) {
+					c1[i][cin2 - 1] = true;
+					c2[j][cin2 - 1] = true;
+					c3[i / 2][j / 3][cin2 - 1] = true;
 					c4[i][j][1] = true;
 				}
 			}

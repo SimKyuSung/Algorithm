@@ -1,4 +1,4 @@
-/// SW Expert Academy
+/// 4299. 태혁이의 사랑은 타이밍
 
 #include <iostream>
 
@@ -15,9 +15,11 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
-
+		int d, h, m, ans = 0;
+		cin >> d >> h >> m;
+		ans = m - 11 + (h - 11) * 60 + (d - 11) * 24 * 60;
+		if (ans < 0)
+			ans = -1;
 		cout << '#' << t << ' ' << ans << endl;
 	}
 }

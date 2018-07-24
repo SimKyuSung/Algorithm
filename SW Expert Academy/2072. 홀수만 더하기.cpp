@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 2072. 홀수만 더하기
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,14 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
+		int input, ans = 0;
+		for (int i = 0; i < 10; i++) {
+			cin >> input;
+			if (input % 2)
+				ans += input;
+		}
 
-		cout << '#' << t << ' ' << ans << endl;
+		cout << '#' << t << ' ' << ans << '\n';
+
 	}
 }

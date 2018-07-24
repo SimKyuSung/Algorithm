@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 3431. 준환이의 운동관리
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,13 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
+		int l, u ,x, ans = 0;
+		cin >> l >> u >> x;
 
-		cout << '#' << t << ' ' << ans << endl;
+		if (x < l)
+			ans = l - x;
+		if (x > u)
+			ans = -1;
+		cout << '#' << t << ' ' << ans << '\n';
 	}
 }

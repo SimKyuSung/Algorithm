@@ -2,7 +2,13 @@
 
 #include <iostream>
 
+#define endl '\n'
+
+using namespace std;
+
 int main()
 {
-	std::cout << "BeakJoon C++ Algorithm" << std::endl;
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout << "BeakJoon C++ Algorithm" << endl;
 }

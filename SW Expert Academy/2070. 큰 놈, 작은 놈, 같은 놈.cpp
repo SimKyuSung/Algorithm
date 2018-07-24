@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 2070. Å« ³ð, ÀÛÀº ³ð, °°Àº ³ð
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,10 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
-
-		cout << '#' << t << ' ' << ans << endl;
+		int n, m;
+		char ans;
+		cin >> n >> m;
+		ans = n > m ? '>' : (n < m ? '<' : '=');
+		cout << '#' << t << ' ' << ans << '\n';
 	}
 }

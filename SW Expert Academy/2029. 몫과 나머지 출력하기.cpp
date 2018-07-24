@@ -1,8 +1,6 @@
-/// SW Expert Academy
+/// 2029. 몫과 나머지 출력하기
 
 #include <iostream>
-
-#define endl '\n'
 
 using namespace std;
 
@@ -15,9 +13,9 @@ int main()
 	cin >> testCase;
 
 	for (int t = 1; t <= testCase; t++) {
-		int n, ans = 0;
-		cin >> n;
+		int a, b;
+		cin >> a >> b;
 
-		cout << '#' << t << ' ' << ans << endl;
+		cout << '#' << t << ' ' << a / b << ' ' << a % b << '\n';
 	}
 }
