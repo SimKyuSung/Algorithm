@@ -1,4 +1,4 @@
-/// 15714.열려라 참깨
+/// 2879.코딩은 에쁘게
 
 #include <iostream>
 #include <vector>
@@ -13,7 +13,7 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	
+
 	int n;
 	cin >> n;
 	x.resize(n);
@@ -57,9 +57,3 @@ int main()
 	}
 	cout << ans << endl;
 }
-
-/*
-1,000,000
-
-LCA?
-*/
