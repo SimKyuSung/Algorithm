@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 #include <queue>
-#include <stack>
+#include <vector>
 
 #define endl '\n'
 
@@ -11,7 +11,7 @@ using namespace std;
 
 const long long LIM = 1e9;
 
-queue <int> bigNumQ(string str, bool flag) {
+queue <int> bigNumQ(string &str, bool flag) {
 	int num = 0;
 	int negative = 1;
 	if (flag) 
@@ -25,8 +25,7 @@ queue <int> bigNumQ(string str, bool flag) {
 			ten = 1;
 			num = 0;
 		}
-		if (str.back() != '-')
-			num += (str.back() - '0') * ten;
+		num += (str.back() - '0') * ten;
 		str.pop_back();
 		ten *= 10;
 	}
@@ -55,12 +54,10 @@ int main()
 	queue<int> qb = bigNumQ(strB, nb);
 
 	bool negative = 0, counter = 0;
-	if (strA.size() != strB.size())
-
 	int c = 0;
 
-	stack <int> ans;
-	while (!qa.empty() || !qb.empty()) {
+	vector <int> ans;
+	while (!qa.empty() || !qb.empty() || c != 0) {
 		int a = 0, b = 0;
 		if (!qa.empty()) {
 			a = qa.front();
@@ -82,35 +79,60 @@ int main()
 			num -= LIM;
 			c = 1;
 		}
-		ans.push(num);
+		ans.push_back(num);
 	}
-	if (c)
-		ans.push(c);
+	
+	//for (int i = ans.size() - 1; i >= 0; i--)
+	//	cout << ans[i];
+	//cout << endl;
 
-	while (!ans.empty() && ans.top() == 0)
-		ans.pop();
+	if (ans.back() < 0) {
+		for (int i = 0; i < ans.size() - 1; i++) {
+			if (ans[i] > 0) {
+				ans[i] -= LIM;
+				ans[i + 1] += 1;
+			}
+		}
+	}
+	else {
+		for (int i = 0; i < ans.size() - 1; i++) {
+			if (ans[i] < 0) {
+				ans[i] += LIM;
+				ans[i + 1] -= 1;
+			}
+		}
+	}
+
+	while (!ans.empty() && ans.back() == 0)
+		ans.pop_back();
+
+	for (int i = 0; i < int(ans.size() - 1); i++) {
+		if (ans[i] < 0)
+			ans[i] *= -1;
+	}
 
 	if (ans.empty())
-		ans.push(0);
-	cout << ans.top();
-
-	//if (ans.top() < 0)
-	//	negative = 1;
-
-	ans.pop();
-	while (!ans.empty()) {
-		int x = ans.top();
-		ans.pop();
-
-		if (negative && x > 0)
-			x -= LIM;
-		if (!negative && x < 0)
-			x += LIM;
-
-		if (x < 0)
-			x = -x;
+		ans.push_back(0);
+	cout << ans.back();
+	
+	for (int i = ans.size() - 2; i >= 0; i--) {
 		cout.fill('0');
 		cout.width(9);
-		cout << x;
+		cout << ans[i];
 	}
+	cout << endl;
+
+
+
 }
+
+
+/*
+
+열정
+창의력
+협력
+도전
+정직
+
+*/

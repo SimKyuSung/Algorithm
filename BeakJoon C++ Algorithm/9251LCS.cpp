@@ -31,9 +31,9 @@ int main()
 				tmpAns = max(tmpAns, dp[j]);
 			}
 			ans = max(dp[j], ans);
-			//cout << dp[j];
+			cout << dp[j];
 		}
-		//cout << endl;
+		cout << endl;
 	}
 	cout << ans << endl;
 }

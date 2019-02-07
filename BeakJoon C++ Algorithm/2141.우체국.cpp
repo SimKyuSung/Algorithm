@@ -21,7 +21,7 @@ int main()
 		cin >> xa[i].first >> xa[i].second;
 		peopleSum += xa[i].second;
 	}
-	half = peopleSum / 2;
+	half = (peopleSum + 1) / 2;
 	peopleSum = 0;
 	sort(xa.begin(), xa.end());
 	for (int i = 0; i < n; i++) {
