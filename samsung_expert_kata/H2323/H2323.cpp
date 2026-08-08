@@ -98,11 +98,11 @@ void moveTo(int absDir) {
 /*
 1. 벽을 만날 때 까지 전진. (최초 벽을 만나면 우측 공간 부터 검색)
 initRun()
-2.
-    A - 주변에 청소할 공간이 남아 있는 경우 좌수법을 이용하여 클린 (좌측 공간 부터 검색)
-    nomalClean()
-    B - 주변에 청소할 공간이 없는 경우 가장 가까운 미청소 구역으로 이동 (동일 한 경우 좌수법으로 결정)
-    findDirtyZone()
+2. 가장 가까운 미청소 구역으로 이동 (동일 한 경우 좌수법으로 결정)
+findDirtyZone()
+
+주변 칸을 좌수법으로 먼저 청소하는 단계를 따로 두었었으나 제거했다.
+인접한 미청소 칸은 거리가 1 이라 어차피 최근접으로 선택되므로 중복이었다.
 */
 
 void initRun() {
@@ -110,32 +110,6 @@ void initRun() {
     while (houseMap[y + dy[dir]][x + dx[dir]] != 2) {
         move(0);
         setMap();
-    }
-}
-
-// 인접한 미청소 칸이 있는 동안 좌수법(좌 -> 직진 -> 우 -> 후진) 순서로 이동한다.
-// 사방이 벽이거나 이미 청소된 칸뿐이면 종료하고 findDirtyZone() 에게 넘긴다.
-void nomalClean() {
-    while (true) {
-        // 스캔은 이동 횟수를 소모하지 않으므로 매 스텝 갱신해도 손해가 없다.
-        setMap();
-
-        int order[4] = { (dir + 1) % 4, dir, (dir + 3) % 4, (dir + 2) % 4 };
-        int next = -1;
-        for (int k = 0; k < 4; ++k) {
-            int nd = order[k];
-            if (houseMap[y + dy[nd]][x + dx[nd]] == 0) {
-                next = nd;
-                break;
-            }
-        }
-
-        // 인접한 미청소 칸 없음. 여기서부터는 B 단계.
-        if (next == -1)
-            return;
-
-        // 지도가 0 이라고 한 칸에만 들어가므로 실패할 수 없다.
-        moveTo(next);
     }
 }
 
@@ -222,10 +196,7 @@ void cleanHouse(int mLimitMoveCount)
     initRun();
 
     while (!allClean) {
-        // A - 주변에 청소할 공간이 남아 있는 동안 좌수법으로 청소
-        nomalClean();
-
-        // B - 가장 가까운 미청소 구역으로 이동. 남은 곳이 없으면 종료.
+        // 가장 가까운 미청소 구역으로 이동. 남은 곳이 없으면 종료.
         if (!findDirtyZone())
             allClean = true;
     }
