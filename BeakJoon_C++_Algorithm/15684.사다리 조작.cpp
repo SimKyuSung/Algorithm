@@ -1,4 +1,4 @@
-/// 15684.»ç´Ù¸® Á¶ÀÛ
+/// 15684.ì‚¬ë‹¤ë¦¬ ì¡°ì‘
 
 #include <iostream>
 #include <vector>
@@ -38,7 +38,7 @@ int main()
 		ladder[a - 1][b] = -1;
 	}
 
-	// À§Ä¡ x, y ¿¡ ¾î¶² ¹øÈ£°¡ Áö³ª°¡´Â Ã¼Å©
+	// ìœ„ì¹˜ x, y ì— ì–´ë–¤ ë²ˆí˜¸ê°€ ì§€ë‚˜ê°€ëŠ” ì²´í¬
 	for (int j = 0; j < n; j++) {
 		int now = j;
 		line[0][j] = j;
@@ -49,40 +49,40 @@ int main()
 		lastNum[j] = now;
 	}
 
-	// ¹Ø¿¡¼­ ºÎÅÍ ±³È¯
+	// ë°‘ì—ì„œ ë¶€í„° êµí™˜
 	dp[h][0].insert(lastNum);
 	for (int i = h - 1; i >= 0; i--) {
 		v.clear();
 		dfs(i, 0);
 
-		// tmpAns ±³È¯ È½¼ö
+		// tmpAns êµí™˜ íšŸìˆ˜
 		for (int tmpAns = 0; tmpAns < ans; tmpAns++) {
-			// ÀÌÀü¿¡ ±³È¯Çß´ø ÈçÀû
+			// ì´ì „ì— êµí™˜í–ˆë˜ í”ì 
 			for (auto x : dp[i + 1][tmpAns]) {
 				int pass1 = 0, pass2 = 0;
 				for (int j = 0; j < n; j++)
 					pass1 += (x[j] == j);
 
-				// ÀÌ¹ø Çà¿¡¼­ ±³È¯ °¡´ÉÇÑ °æ¿ìÀÇ ¼ö¸¦ ´ëÀÔ
+				// ì´ë²ˆ í–‰ì—ì„œ êµí™˜ ê°€ëŠ¥í•œ ê²½ìš°ì˜ ìˆ˜ë¥¼ ëŒ€ì…
 				for (auto k : v) {
 					if (tmpAns + k.size() >= ans)
 						continue;
 					vector <int> tmp = x;
 
-					// ±³È¯
+					// êµí™˜
 					for (auto c : k)
 						swap(tmp[line[i][c]], tmp[line[i][c + 1]]);
 					
-					// »õ·Î »ı¼ºµÈ dpÀÇ È¥Àâµµ °è»ê
+					// ìƒˆë¡œ ìƒì„±ëœ dpì˜ í˜¼ì¡ë„ ê³„ì‚°
 					pass2 = 0;
 					for (int j = 0; j < n; j++)
 						pass2 += (tmp[j] == j);
 					
-					// ´äÀÌ µÈ°æ¿ì
+					// ë‹µì´ ëœê²½ìš°
 					if (pass2 == n)
 						ans = min(ans, int(tmpAns + k.size()));
 					
-					// È¥Àâµµ°¡ ´Ã¾î³ª´Â °æ¿ì ±³È¯ÇÏÁö ¾ÊÀ½ -> 12ms ÁÙÀÓ
+					// í˜¼ì¡ë„ê°€ ëŠ˜ì–´ë‚˜ëŠ” ê²½ìš° êµí™˜í•˜ì§€ ì•ŠìŒ -> 12ms ì¤„ì„
 					if (pass2 >= pass1)
 						dp[i][tmpAns + k.size()].insert(tmp);
 				}
@@ -98,9 +98,9 @@ void dfs(int a, int b) {
 		v.push_back(counter);
 		return;
 	}
-	// ÇöÀç À§Ä¡¿¡¼­ ±³È¯ÇÏÁö ¾ÊÀ» °æ¿ì
+	// í˜„ì¬ ìœ„ì¹˜ì—ì„œ êµí™˜í•˜ì§€ ì•Šì„ ê²½ìš°
 	dfs(a, b + 1);
-	// ÇöÀç À§Ä¡¿¡¼­ ±³È¯ÇÏ´Â °æ¿ì
+	// í˜„ì¬ ìœ„ì¹˜ì—ì„œ êµí™˜í•˜ëŠ” ê²½ìš°
 	if (ladder[a][b] == 0 && ladder[a][b + 1] == 0) {
 		ladder[a][b] = 1;
 		ladder[a][b + 1] = -1;

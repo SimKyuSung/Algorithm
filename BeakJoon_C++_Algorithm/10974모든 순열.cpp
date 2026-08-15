@@ -1,4 +1,4 @@
-/// 10974¸ğµç ¼ø¿­
+/// 10974ëª¨ë“  ìˆœì—´
 
 #include <iostream>
 #include <list>
@@ -25,7 +25,7 @@ int main()
 	solve(0, n);
 }
 
-// b¸¦ a ÀÚ¸®¿¡ »ğÀÔ ÇÏ°í b¸¦ »èÁ¦ (a < b)
+// bë¥¼ a ìë¦¬ì— ì‚½ì… í•˜ê³  bë¥¼ ì‚­ì œ (a < b)
 inline void swap1(int a, int b) {
 	list <int>::iterator itor1 = arr.begin();
 	list <int>::iterator itor2 = arr.begin();
@@ -34,7 +34,7 @@ inline void swap1(int a, int b) {
 	arr.insert(itor1, *itor2);
 	arr.erase(itor2);
 }
-// b¿¡ a¸¦ »ğÀÔÇÏ°í a¸¦ »èÁ¦(a < b)
+// bì— aë¥¼ ì‚½ì…í•˜ê³  aë¥¼ ì‚­ì œ(a < b)
 inline void swap2(int a, int b) {
 	list <int>::iterator itor1 = arr.begin();
 	list <int>::iterator itor2 = arr.begin();
@@ -51,11 +51,11 @@ inline void print() {
 		cout << *itor << " ";
 	cout << "\n";
 }
-// ¼ø¿­ ¾Ë°í¸®Áò
+// ìˆœì—´ ì•Œê³ ë¦¬ì¦˜
 /*
-0. Á¾·áÁ¶°Ç
-1. ½º¿Ò ¾ÈÇÏ°í ±×³É Ãâ·Â
-2. ½º¿ÒÇÏ°í Àç±Í
+0. ì¢…ë£Œì¡°ê±´
+1. ìŠ¤ì™‘ ì•ˆí•˜ê³  ê·¸ëƒ¥ ì¶œë ¥
+2. ìŠ¤ì™‘í•˜ê³  ì¬ê·€
 */
 void solve(int x, int depth) {
 	if (x == depth - 1) {

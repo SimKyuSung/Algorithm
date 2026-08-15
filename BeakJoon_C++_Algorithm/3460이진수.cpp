@@ -1,4 +1,4 @@
-/// 3460ÀÌÁø¼ö
+/// 3460ì´ì§„ìˆ˜
 
 #include <cstdio>
 #include <iostream>

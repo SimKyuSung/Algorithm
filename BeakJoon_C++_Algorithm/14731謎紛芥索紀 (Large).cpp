@@ -1,4 +1,4 @@
-/// 14731ÚºİÑËÎßãÑº (Large)
+/// 14731è¬ç´›èŠ¥ç´¢ç´€ (Large)
 
 #include <iostream>
 #include <vector>
@@ -34,7 +34,7 @@ long long modular_exponentiation(long long x, long long exp, long long mod) {
 	long long result = 1;
 	x %= mod;
 	while (exp) {
-		// exp¸¦ 2Áø¼ö·Î º¯È¯
+		// expë¥¼ 2ì§„ìˆ˜ë¡œ ë³€í™˜
 		if (exp % 2)
 			result = (result * x) % mod;
 		x = (x * x) % mod;
@@ -45,9 +45,9 @@ long long modular_exponentiation(long long x, long long exp, long long mod) {
 
 /*
 
-ÃÖ¾ÇÀÇ pow ÇÔ¼ö
+ìµœì•…ì˜ pow í•¨ìˆ˜
 
-(2 ^ 1000000000) % mod = ¹«¾ù?
+(2 ^ 1000000000) % mod = ë¬´ì—‡?
 
 1
 2

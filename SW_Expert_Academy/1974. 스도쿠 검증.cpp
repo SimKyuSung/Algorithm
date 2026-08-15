@@ -1,4 +1,4 @@
-/// 1974. ½ΊµµΔν °ΛΑυ
+/// 1974. μ¤λ„μΏ  κ²€μ¦
 
 #include <iostream>
 #include <memory.h>

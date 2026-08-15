@@ -14,10 +14,10 @@ int s[500][500];
 int dx[4] = { 0, 1, 0, -1 };
 int dy[4] = { 1, 0, -1, 0 };
 
-// 1. 4ºí·° Àç±Í
+// 1. 4ë¸”ëŸ­ ì¬ê·€
 int tetris(int, int, int);
 
-// 3. TÀÚ ºí·° 8Á¾
+// 3. Tì ë¸”ëŸ­ 8ì¢…
 int t();
 
 
@@ -42,7 +42,7 @@ int tetris(int y, int x, int t) {
 	s[y][x] = 1;
 	int maximum = 0;
 	for (int i = 0; i < 4; i++) {
-		// ¹è¿­ ¹üÀ§ ¿¡·¯
+		// ë°°ì—´ ë²”ìœ„ ì—ëŸ¬
 		int tx = x + dx[i];
 		int ty = y + dy[i];
 		if (tx > -1 && tx < m && ty > -1 && ty < n && s[ty][tx] != 1 && t < 3)
@@ -56,22 +56,22 @@ int tetris(int y, int x, int t) {
 int t() {
 	int ret = 0;
 
-	// °¡·Î ±ä°ª
+	// ê°€ë¡œ ê¸´ê°’
 	for (int i = 0; i < n - 1; i++)
 		for (int j = 0; j < m - 2; j++)
 			ret = max(ret, w[i][j] + w[i][j + 1] + w[i][j + 2] + w[i + 1][j + 1]);
 
-	// °¡·Î ±ä°ª
+	// ê°€ë¡œ ê¸´ê°’
 	for (int i = 1; i < n; i++)
 		for (int j = 0; j < m - 2; j++)
 			ret = max(ret, w[i][j] + w[i][j + 1] + w[i][j + 2] + w[i - 1][j + 1]);
 
-	// ¼¼·Î ±ä°ª
+	// ì„¸ë¡œ ê¸´ê°’
 	for (int i = 0; i < n - 2; i++)
 		for (int j = 0; j < m - 1; j++)
 			ret = max(ret, w[i][j] + w[i + 1][j] + w[i + 2][j] + w[i + 1][j + 1]);
 
-	// ¼¼·Î ±ä°ª
+	// ì„¸ë¡œ ê¸´ê°’
 	for (int i = 0; i < n - 2; i++)
 		for (int j = 1; j < m; j++)
 			ret = max(ret, w[i][j] + w[i + 1][j] + w[i + 2][j] + w[i + 1][j - 1]);

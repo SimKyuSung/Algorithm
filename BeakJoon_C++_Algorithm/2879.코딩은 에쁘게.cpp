@@ -1,4 +1,4 @@
-/// 2879.ÄÚµùÀº ¿¡»Ú°Ô
+/// 2879.ì½”ë”©ì€ ì—ì˜ê²Œ
 
 #include <iostream>
 #include <vector>
@@ -25,28 +25,28 @@ int main()
 		long long hall;
 		cin >> hall;
 
-		// ¸ñÇ¥º¸´Ù À§¿¡ ÀÖÀ»¶§
+		// ëª©í‘œë³´ë‹¤ ìœ„ì— ìžˆì„ë•Œ
 		if (move + x[i] > hall) {
-			// ¸ðÀÚ¶õ ¿òÁ÷ÀÓ
+			// ëª¨ìžëž€ ì›€ì§ìž„
 			if (move < 0) {
 				ans += move + x[i] - hall;
 				move = hall - x[i];
 			}
-			// °Å²Ù·Î ¿òÁ÷ÀÓ
+			// ê±°ê¾¸ë¡œ ì›€ì§ìž„
 			else {
 				move = hall - x[i];
 				if (move < 0)
 					ans -= move;
 			}
 		}
-		// ¸ñÇ¥º¸´Ù ¾Æ·¡ ÀÖÀ»¶§
+		// ëª©í‘œë³´ë‹¤ ì•„ëž˜ ìžˆì„ë•Œ
 		else if (move + x[i] < hall) {
-			// ¸ðÀÚ¶õ ¿òÁ÷ÀÓ
+			// ëª¨ìžëž€ ì›€ì§ìž„
 			if (move > 0) {
 				ans += hall - (x[i] + move);
 				move = hall - x[i];
 			}
-			// °Å²Ù·Î ¿òÁ÷ÀÓ
+			// ê±°ê¾¸ë¡œ ì›€ì§ìž„
 			else {
 				move = hall - x[i];
 				if (move > 0)

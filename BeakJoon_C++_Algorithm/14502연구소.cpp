@@ -1,4 +1,4 @@
-/// 14502¿¬±¸¼Ò
+/// 14502ì—°êµ¬ì†Œ
 
 #include <iostream>
 #include <vector>
@@ -59,9 +59,9 @@ int main()
 				
 				// 2. bfs
 				while (!q.empty()) {
-					// 2 - 1 Å¥ ÁÖº¯¿¡ ÀÖ´Â °ªÀ» Áý¾î »ïÅ°°í 2·Î ¹Ù²Þ
+					// 2 - 1 í ì£¼ë³€ì— ìžˆëŠ” ê°’ì„ ì§‘ì–´ ì‚¼í‚¤ê³  2ë¡œ ë°”ê¿ˆ
 					for (int t = 0; t < 4; t++) {
-						// 2 - 2 Å¥¿¡ ³ÖÀ» ¼ö ÀÖ´ÂÁö ¿¡·¯ Ã¼Å©
+						// 2 - 2 íì— ë„£ì„ ìˆ˜ ìžˆëŠ”ì§€ ì—ëŸ¬ ì²´í¬
 						int xx = q.front().second + moveX[t];
 						int yy = q.front().first + moveY[t];
 						if ((0 <= xx && xx < m && 0 <= yy && yy < n) && (s[yy][xx] == 0)) {
@@ -77,7 +77,7 @@ int main()
 				// 3. min counter
 				ans = min(ans, counter);
 
-				// 4, rest °ª ´Ù½Ã 0À¸·Î
+				// 4, rest ê°’ ë‹¤ì‹œ 0ìœ¼ë¡œ
 				for (int t = 0; t < rest.size(); t++)
 					s[rest[t].first][rest[t].second] = 0;
 				s[y[2]][x[2]] = 0;

@@ -11,8 +11,8 @@ int main()
 
 	int k, n, m, ans;
 	cin >> k >> n >> m;
-	// ÇÊ¿äÇÑµ·, k * n
-	// ¾ö¸¶ ÇÑÅ× °¥ÃëÇÏ´Â µ· = k * n - m
+	// í•„ìš”í•œëˆ, k * n
+	// ì—„ë§ˆ í•œí…Œ ê°ˆì·¨í•˜ëŠ” ëˆ = k * n - m
 	ans = k * n - m;
 	if (ans < 0)	printf("0\n");
 	else			printf("%d\n", ans);

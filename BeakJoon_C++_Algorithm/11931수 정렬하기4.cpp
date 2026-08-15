@@ -1,4 +1,4 @@
-/// 11931¼ö Á¤·ÄÇÏ±â4
+/// 11931ìˆ˜ ì •ë ¬í•˜ê¸°4
 
 //#include <stdio.h>
 //
@@ -19,11 +19,11 @@
 //	int l_hold = left;
 //	int r_hold = right;
 //	while (left < right) {
-//		// ÇÇ¹þ º¸´Ù ÀÛÀ¸¸é ¿ÞÂÊÀ¸·Î °¡Á®¿È
+//		// í”¼ë²— ë³´ë‹¤ ìž‘ìœ¼ë©´ ì™¼ìª½ìœ¼ë¡œ ê°€ì ¸ì˜´
 //		while (a[right] >= pivot && left < right)	right--;
 //		if (left != right)		a[left] = a[right];
 //
-//		// ÇÇ¹þº¸´Ù Å©¸é ¿À¸¥ÂÊÀ¸·Î °¡Á®¿È
+//		// í”¼ë²—ë³´ë‹¤ í¬ë©´ ì˜¤ë¥¸ìª½ìœ¼ë¡œ ê°€ì ¸ì˜´
 //		while (a[left] <= pivot  && left < right)	left++;
 //		if (left != right) {
 //			a[right] = a[left];

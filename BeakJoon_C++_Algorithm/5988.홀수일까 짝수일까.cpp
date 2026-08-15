@@ -1,4 +1,4 @@
-/// 5988.Ȧ���ϱ� ¦���ϱ�
+/// 5988.홀수일까 짝수일까
 
 #include <iostream>
 #include <string>

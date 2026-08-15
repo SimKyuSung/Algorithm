@@ -1,4 +1,4 @@
-/// 1213. [S/W ¹®Á¦ÇØ°á ±âº»] 3ÀÏÂ÷ - String
+/// 1213. [S/W ë¬¸ì œí•´ê²° ê¸°ë³¸] 3ì¼ì°¨ - String
 
 #include <iostream>
 #include <string>

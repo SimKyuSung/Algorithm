@@ -1,4 +1,4 @@
-﻿/// 9987.포켓몬 마스터
+/// 9987.포켓몬 마스터
 
 #include <iostream>
 #include <string>

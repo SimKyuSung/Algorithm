@@ -35,18 +35,18 @@ int main()
 
 void starMaker(int n) {
 
-	// º¹»çÇÏ±â
+	// ë³µì‚¬í•˜ê¸°
 	for (int i = n; i > 0; i--)
 		star[i + 2] = star[i];
 
-	// 1¹øÁÙ
+	// 1ë²ˆì¤„
 	for (int i = 0; i < 4; i++)
 		star[1] += "*";
-	// 2¹øÁÙ
+	// 2ë²ˆì¤„
 	star[2] = "*";
 
-	// º¹»ç ±¸°£
-	// ¾Õ¿¡ µÎÁÙ º¹»ç ±¸°£
+	// ë³µì‚¬ êµ¬ê°„
+	// ì•ì— ë‘ì¤„ ë³µì‚¬ êµ¬ê°„
 	star[3] = "* " + star[3];
 	star[3] += "**";
 	for (int i = 1; i < n - 6; i++)
@@ -54,13 +54,13 @@ void starMaker(int n) {
 	for (int i = 4; i < n + 1; i++)
 		star[i] = "* " + star[i] + " *";
 
-	// n + 1¹ø ÁÙ
+	// n + 1ë²ˆ ì¤„
 	star[n - 1] = "*";
 	for (int i = 2; i < n - 2; i++)
 		star[n - 1] += " ";
 	star[n - 1] += "*";
 
-	// n¹ø ÁÙ
+	// në²ˆ ì¤„
 	star[n] = star[1];
 	if (n == N)
 		return;

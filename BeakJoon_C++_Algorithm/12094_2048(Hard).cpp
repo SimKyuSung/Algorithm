@@ -44,7 +44,7 @@ int main()
 
 // dfs
 unsigned char dfs(int lv) {
-	// 0. Å×½ºÆ® Ãâ·Â
+	// 0. í…ŒìŠ¤íŠ¸ ì¶œë ¥
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++)
 			cout << (int)tile[lv][i][j] << ' ';
@@ -53,7 +53,7 @@ unsigned char dfs(int lv) {
 	cout << endl;
 
 	unsigned char ans = 0;
-	// 1. Á¾·áÁ¶°Ç
+	// 1. ì¢…ë£Œì¡°ê±´
 	if (lv == maxLv) {
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++)

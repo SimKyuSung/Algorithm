@@ -1,4 +1,4 @@
-/// 5653. [���� SW �����׽�Ʈ] �ٱ⼼�����
+/// 5653. [모의 SW 역량테스트] 줄기세포배양
 
 #include <iostream>
 #include <algorithm>

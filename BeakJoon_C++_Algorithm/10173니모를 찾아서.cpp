@@ -1,4 +1,4 @@
-/// 10173�ϸ� ã�Ƽ�
+/// 10173니모를 찾아서
 
 #include <iostream>
 #include <string>

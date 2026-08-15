@@ -29,13 +29,13 @@ int main()
 		cin >> encode;
 
 		for (int i = 0; i < encode.size() / 4; i++) {
-			// 4°³ ´ÜÀ§·Î ÀÐÀ½
+			// 4ê°œ ë‹¨ìœ„ë¡œ ì½ìŒ
 			int bitMask = 0;
 			for (int j = 0; j < 4; j++) {
 				bitMask <<= 6;
 				bitMask |= base64[encode[i * 4 + j]];
 			}
-			// 3°³ ´ÜÀ§·Î ¾²±â
+			// 3ê°œ ë‹¨ìœ„ë¡œ ì“°ê¸°
 			for (int j = 0; j < 3; j++)
 				decode += (char)(bitMask >> (8 * (2 - j)));
 		}

@@ -1,4 +1,4 @@
-/// 2814. √÷¿Â ∞Ê∑Œ
+/// 2814. ÏµúÏû• Í≤ΩÎ°ú
 
 #include <iostream>
 #include <vector>

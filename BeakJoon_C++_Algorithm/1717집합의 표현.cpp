@@ -1,4 +1,4 @@
-/// 1717ÁýÇÕÀÇ Ç¥Çö
+/// 1717ì§‘í•©ì˜ í‘œí˜„
 
 #include <iostream>
 #include <vector>
@@ -19,16 +19,16 @@ int main()
 	while (m--) {
 		int p, a, b;
 		cin >> p >> a >> b;
-		// °°Àº ÁýÇÕ ÀÎÁö È®ÀÎ
+		// ê°™ì€ ì§‘í•© ì¸ì§€ í™•ì¸
 		if (p) {
 			while (a != root[a]) a = root[a];
 			while (b != root[b]) b = root[b];
 			if (a == b)	cout << "YES\n";
 			else		cout << "NO\n";
 		}
-		// ÁýÇÕ Ãß°¡
+		// ì§‘í•© ì¶”ê°€
 		else {
-			// 1. ´ëÇ¥¿ø¼Ò ºÒ·¯¿À±â
+			// 1. ëŒ€í‘œì›ì†Œ ë¶ˆëŸ¬ì˜¤ê¸°
 			while (a != root[a]) a = root[a];
 			while (b != root[b]) b = root[b];
 			if (a < b)

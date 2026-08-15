@@ -1,4 +1,4 @@
-/// 1963.¼Ò¼ö°æ·Î
+/// 1963.ì†Œìˆ˜ê²½ë¡œ
 
 #include <iostream>
 #include <vector>

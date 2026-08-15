@@ -1,4 +1,4 @@
-/// 11003.�ּڰ� ã��
+/// 11003.최솟값 찾기
 
 #include <iostream>
 #include <deque>

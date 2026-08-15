@@ -28,12 +28,12 @@ void starMaker(int n) {
 	int bitMask = 0xAAAAAAAA;
 	int n_1 = n >> 1;
 	if (n & bitMask) {
-		// º¹»çÇÏ±â
+		// ë³µì‚¬í•˜ê¸°
 		for (int i = n_1 - 1; i != 0; --i)
 			star[i + n_1 - 1] = star[i];
 		
-		// »ï°¢Çü ±×¸®±â
-		// 1¹ø ÁÙ
+		// ì‚¼ê°í˜• ê·¸ë¦¬ê¸°
+		// 1ë²ˆ ì¤„
 		star[1] = "";
 		for (int i = 2; i < n; ++i)
 			star[1] += " ";
@@ -41,7 +41,7 @@ void starMaker(int n) {
 		/*for (int i = 2; i < n; ++i)
 			star[1] += " ";*/
 
-		// º¹»ç ±¸°£ ÀüÁÙ
+		// ë³µì‚¬ êµ¬ê°„ ì „ì¤„
 		for (int i = 2; i < n_1; ++i) {
 			star[i] = "";
 			for (int j = i; j < n - 1; ++j)
@@ -53,16 +53,16 @@ void starMaker(int n) {
 			//for (int j = i; j < n - 1; ++j)
 			//	star[i] += " ";
 		}
-		// º¹»ç ±¸°£ ÁÙ
+		// ë³µì‚¬ êµ¬ê°„ ì¤„
 		for (int i = n_1; i < n - 1; ++i) {
-			// ¾Õ¿¡´Ù ÀÌ¾î ºÙÀÌ±â
+			// ì•ì—ë‹¤ ì´ì–´ ë¶™ì´ê¸°
 			for (int j = n - i + n_1; j < n; ++j)
 				star[i] = " " + star[i];
 			star[i] = "*" + star[i];
 			for (int j = i; j < n - 1; ++j)
 				star[i] = " " + star[i];
 
-			// µÚ¿¡´Ù ÀÌ¾î ºÙÀÌ±â
+			// ë’¤ì—ë‹¤ ì´ì–´ ë¶™ì´ê¸°
 			for (int j = n - i + n_1; j < n; ++j)
 				star[i] += " ";
 			for (int j = n - i + n_1; j < n; ++j)
@@ -71,30 +71,30 @@ void starMaker(int n) {
 			//for (int j = i; j < n - 1; ++j)
 			//	star[i] += " ";
 		}
-		// ¸¶Áö¸· ÁÙ
+		// ë§ˆì§€ë§‰ ì¤„
 		star[n - 1] = "";
 		for (int i = 0; i < (n - 1) * 2 - 1; ++i)
 			star[n - 1] += "*";
 	}
 	else {
-		// º¹»çÇÏ±â
+		// ë³µì‚¬í•˜ê¸°
 		for (int i = n_1 - 1; i != 0 ; --i)
 			star[i + 1] = star[i];
-		// »ï°¢Çü ±×¸®±â
-		// 1¹ø ÁÙ
+		// ì‚¼ê°í˜• ê·¸ë¦¬ê¸°
+		// 1ë²ˆ ì¤„
 		star[1] = "";
 		for (int i = 0; i < (n - 1) * 2 - 1; ++i)
 			star[1] += "*";
-		// º¹»ç ±¸°£ ÁÙ
+		// ë³µì‚¬ êµ¬ê°„ ì¤„
 		for (int i = 2; i <= n_1; ++i) {
-			// ¾Õ¿¡´Ù ÀÌ¾î ºÙÀÌ±â
+			// ì•ì—ë‹¤ ì´ì–´ ë¶™ì´ê¸°
 			for (int j = i; j < n_1; ++j)
 				star[i] = " " + star[i];
 			star[i] = "*" + star[i];
 			for (int j = n_1 - i; j < n_1 - 1; ++j)
 				star[i] = " " + star[i];
 
-			// µÚ¿¡´Ù ÀÌ¾î ºÙÀÌ±â
+			// ë’¤ì—ë‹¤ ì´ì–´ ë¶™ì´ê¸°
 			for (int j = i; j < n_1; ++j)
 				star[i] += " ";
 			for (int j = i; j < n_1; ++j)
@@ -104,7 +104,7 @@ void starMaker(int n) {
 			//	star[i] += " ";
 		}
 
-		// º¹»ç ±¸°£ ÈÄÁÙ
+		// ë³µì‚¬ êµ¬ê°„ í›„ì¤„
 		for (int i = n_1 + 1; i < n - 1; ++i) {
 			star[i] = "";
 			for (int j = n - i; j < n - 1; ++j)
@@ -116,7 +116,7 @@ void starMaker(int n) {
 			//for (int j = n - i; j < n - 1; ++j)
 			//	star[i] += " ";
 		}
-		// ¸¶Áö¸· ÁÙ
+		// ë§ˆì§€ë§‰ ì¤„
 		star[n - 1] = "";
 		for (int i = 1; i < n - 1; ++i)
 			star[n - 1] += " ";
@@ -124,7 +124,7 @@ void starMaker(int n) {
 		//for (int i = 1; i < n - 1; ++i)
 		//	star[n - 1] += " ";
 	}
-	// ÀÏ´ÜÀº Àç±Í·Î Â¥Áö¸¸ ¹İº¹¹®À¸·Î Â¥º¸±â
+	// ì¼ë‹¨ì€ ì¬ê·€ë¡œ ì§œì§€ë§Œ ë°˜ë³µë¬¸ìœ¼ë¡œ ì§œë³´ê¸°
 	if (n == N)
 		return;
 	else

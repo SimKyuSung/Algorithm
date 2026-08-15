@@ -11,7 +11,7 @@ int main()
 
 	int t, second300, second60, second10;
 	cin >> t;
-	// 300√ , 60√ , 10√ 
+	// 300Ï¥à, 60Ï¥à, 10Ï¥à
 	second300 = t / 300;
 	t = t % 300;
 	second60 = t / 60;

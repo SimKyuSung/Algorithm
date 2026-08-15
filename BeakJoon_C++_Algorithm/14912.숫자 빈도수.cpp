@@ -1,5 +1,5 @@
-/// 14912.¼ıÀÚ ºóµµ¼ö
-/// 1019BookPage  <- 11170_0ÀÇ °³¼ö
+/// 14912.ìˆ«ì ë¹ˆë„ìˆ˜
+/// 1019BookPage  <- 11170_0ì˜ ê°œìˆ˜
 
 #include <iostream>
 #include <cstdio>
@@ -16,7 +16,7 @@ int main()
 	vector<int> cy;
 	cin >> n >> d;
 
-	// °¢ ÀÚ¸®¼ö ¼öÁı
+	// ê° ìë¦¬ìˆ˜ ìˆ˜ì§‘
 	int tmp = n;
 	while (tmp) {
 		cy.push_back(tmp % 10);

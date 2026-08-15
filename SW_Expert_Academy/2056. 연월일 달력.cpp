@@ -1,4 +1,4 @@
-/// 2056. ¿¬¿ùÀÏ ´Ş·Â
+/// 2056. ì—°ì›”ì¼ ë‹¬ë ¥
 
 #include <iostream>
 #include <iomanip>

@@ -28,7 +28,7 @@ int main()
 		if (!q.empty() && q.front() <= i)
 			q.pop();
 
-		// Àü±¸°¡ ÄÑÁ® ÀÖÀ½
+		// ì „êµ¬ê°€ ì¼œì ¸ ìžˆìŒ
 		if ((q.size() + bulb[i]) % 2) {
 			//cout << q.size() + bulb[i] << ' ' << i << endl;
 			ans++;
@@ -40,7 +40,7 @@ int main()
 	for (int i = n - k + 1; i < n; i++) {
 		if (!q.empty() && q.front() <= i)
 			q.pop();
-		// Àü±¸°¡ ÄÑÁ® ÀÖÀ½
+		// ì „êµ¬ê°€ ì¼œì ¸ ìžˆìŒ
 		if ((q.size() + bulb[i]) % 2) {
 			//cout << q.size() + bulb[i] << ' ' << i << endl;
 			insomnia = 1;

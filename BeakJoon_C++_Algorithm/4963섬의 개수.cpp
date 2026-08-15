@@ -1,4 +1,4 @@
-/// 4963¼¶ÀÇ °³¼ö
+/// 4963ì„¬ì˜ ê°œìˆ˜
 
 #include <cstdio>
 #include <iostream>
@@ -6,11 +6,11 @@
 
 using namespace std;
 
-// ÀÎµ¦½º ¿¡·¯¶Ù¾î ³Ñ±â
+// ì¸ë±ìŠ¤ ì—ëŸ¬ë›°ì–´ ë„˜ê¸°
 int w, h;
 int ls[52][52];
 
-// Ã¼Å©Ç¥½Ã
+// ì²´í¬í‘œì‹œ
 void function(int, int);
 
 int main()

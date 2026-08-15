@@ -1,4 +1,4 @@
-/// 2661ÁÁÀº¼ö¿­
+/// 2661ì¢‹ì€ìˆ˜ì—´
 
 #include <iostream>
 #include <vector>
@@ -26,7 +26,7 @@ int main() {
 
 bool solve(int x) {
 	if (x == n) return true;
-	// 1 ~ 3 ±îÁö Áß¿¡ 1°³ ³Ö´Â´Ù.
+	// 1 ~ 3 ê¹Œì§€ ì¤‘ì— 1ê°œ ë„£ëŠ”ë‹¤.
 	for (int i = 1; i < 4; i++) {
 		a[x] = i;
 		if (check(x)) {
@@ -38,7 +38,7 @@ bool solve(int x) {
 }
 
 bool check(int x) {
-	// i °³ ºñ±³
+	// i ê°œ ë¹„êµ
 	for (int i = 1; i <= (x + 1) / 2; i++) {
 		bool flag = false;
 		for (int j = 0; j < i; j++) {

@@ -1,4 +1,4 @@
-/// 13460Â°·ÎÅ»Ãâ2
+/// 13460ì§¸ë¡œíƒˆì¶œ2
 
 #include <iostream>
 #include <queue>
@@ -10,7 +10,7 @@ using namespace std;
 char maze[10][10];
 bool dp[10][10][10][10];
 
-// ³², ºÏ, ¼­, µ¿
+// ë‚¨, ë¶, ì„œ, ë™
 const short dx[4] = { 0, 0, -1, 1 };
 const short dy[4] = { 1, -1, 0, 0 };
 
@@ -66,7 +66,7 @@ int main()
 				short ry = now.rY, rx = now.rX, by = now.bY, bx = now.bX;
 				int bCounter = 0, rCounter = 0;
 
-				// 1. ÆÄ¶õ°ø ¿òÁ÷ÀÌ±â
+				// 1. íŒŒëž€ê³µ ì›€ì§ì´ê¸°
 				while (maze[by][bx] == '.') {
 					by += dy[d];
 					bx += dx[d];
@@ -77,7 +77,7 @@ int main()
 				by -= dy[d];
 				bx -= dx[d];
 
-				// 2. »¡°£°ø ¿òÁ÷ÀÌ±â
+				// 2. ë¹¨ê°„ê³µ ì›€ì§ì´ê¸°
 				while (maze[ry][rx] == '.') {
 					ry += dy[d];
 					rx += dx[d];
@@ -90,7 +90,7 @@ int main()
 				ry -= dy[d];
 				rx -= dx[d];
 
-				// 3. °°Àº À§Ä¡¿¡ ÀÖ´Ù¸é ¸¹ÀÌ ¿òÁ÷ÀÎ Ä£±¸¸¦ µÚ·Î º¸³¿
+				// 3. ê°™ì€ ìœ„ì¹˜ì— ìžˆë‹¤ë©´ ë§Žì´ ì›€ì§ì¸ ì¹œêµ¬ë¥¼ ë’¤ë¡œ ë³´ëƒ„
 				if (ry == by && rx == bx) {
 					if (bCounter > rCounter) {
 						by -= dy[d];

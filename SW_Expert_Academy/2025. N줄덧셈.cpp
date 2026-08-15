@@ -1,4 +1,4 @@
-/// 2025. NÁÙµ¡¼À
+/// 2025. Nì¤„ë§ì…ˆ
 
 #include <iostream>
 
@@ -12,7 +12,7 @@ int main()
 }
 
 /*
-overflow ¹æÁö ±â¹ı
+overflow ë°©ì§€ ê¸°ë²•
 
 (A + B) / 2
 (B - A + 2A) / 2

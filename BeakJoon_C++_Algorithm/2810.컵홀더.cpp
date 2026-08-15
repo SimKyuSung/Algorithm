@@ -1,4 +1,4 @@
-/// 2810.дех╕╢У
+/// 2810.Л╩╣М≥─К█■
 
 #include <iostream>
 #include <string>

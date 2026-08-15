@@ -1,4 +1,4 @@
-/// 4196.µµ¹Ì³ë
+/// 4196.ë„ë¯¸ë…¸
 
 #include <iostream>
 #include <memory.h>

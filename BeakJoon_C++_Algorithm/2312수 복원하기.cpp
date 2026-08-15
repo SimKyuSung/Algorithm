@@ -1,4 +1,4 @@
-/// 2312¼ö º¹¿øÇÏ±â
+/// 2312ìˆ˜ ë³µì›í•˜ê¸°
 
 #include <iostream>
 #include <vector>
@@ -15,7 +15,7 @@ int main()
 	ios::sync_with_stdio(false);
 	// make prime num
 	for (int i = 2; i < 1000; i++) {
-		// ÀÌ¹Ì ¹æ¹®ÇÑ ¿ø¼Ò´Â Á×À½
+		// ì´ë¯¸ ë°©ë¬¸í•œ ì›ì†ŒëŠ” ì£½ìŒ
 		if (!arr[i])	continue;
 		for (int j = i + i; j < 100000; j+=i) {
 			arr[j] = false;
@@ -30,16 +30,16 @@ int main()
 	int t;	cin >> t;
 	while (t--) {
 		int n;	cin >> n;
-		// nÀ» 1·Î ¸¸µéÀÚ!
+		// nì„ 1ë¡œ ë§Œë“¤ì!
 		int p = 0;
 		while (n != 1) {
-			// ¼Ò¼ö·Î ³ª´©¾î ¶³¾îÁö¸é?!
+			// ì†Œìˆ˜ë¡œ ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ë©´?!
 			int counter = 0;
 			while (n % pNum[p] == 0) {
 				counter++;
 				n /= pNum[p];
 			}
-			// ³ª´«ÀûÀÌ ÀÖ´Ù¸é 
+			// ë‚˜ëˆˆì ì´ ìˆë‹¤ë©´ 
 			if (counter)
 				cout << pNum[p] << " " << counter << "\n";
 			p++;

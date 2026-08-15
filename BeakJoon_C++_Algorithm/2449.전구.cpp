@@ -1,4 +1,4 @@
-/// 2449.Àü±¸
+/// 2449.ì „êµ¬
 
 #include <iostream>
 #include <memory.h>
@@ -11,10 +11,10 @@ using namespace std;
 int n, k;
 
 
-// »óÅÂ b ºÎÅÍ ½ÃÀÛÇØ¼­ 1 ~ NumÁß ÇÑ°¡Áö »öÀ¸·Î ¸¸µå´Â ÃÖ¼Ò°ª
-// -> 1 ~ num »óÅÂ¿¡¼­ b¸¦ ¸¸µå´Â ÃÖ¼Ò°ª
+// ìƒíƒœ b ë¶€í„° ì‹œìž‘í•´ì„œ 1 ~ Numì¤‘ í•œê°€ì§€ ìƒ‰ìœ¼ë¡œ ë§Œë“œëŠ” ìµœì†Œê°’
+// -> 1 ~ num ìƒíƒœì—ì„œ bë¥¼ ë§Œë“œëŠ” ìµœì†Œê°’
 
-//  left - right ±¸°£À» c¹øÀ¸·Î ¸¸µå´Â ÃÖÀû°ª
+//  left - right êµ¬ê°„ì„ cë²ˆìœ¼ë¡œ ë§Œë“œëŠ” ìµœì ê°’
 int dp[200][200][21];
 bool check[200][200][21];
 int dfs(int, int, int);
@@ -25,19 +25,19 @@ int main()
 	cin.tie(0);
 	
 	memset(dp, -1, sizeof(dp));
-	// ÀÔ·Â
+	// ìž…ë ¥
 	cin >> n >> k;
 	for (int i = 0; i < n; i++) {
 		int tmp;
 		cin >> tmp;
 
-		// Àü±¸°¡ 1°³ ÀÏ¶§ x -> x·Î ¹Ù²Ù´Â °æ¿ì´Â 0¹ø ³ª¸ÓÁö´Â 1¹øÀÇ ½ºÀ§Äª
+		// ì „êµ¬ê°€ 1ê°œ ì¼ë•Œ x -> xë¡œ ë°”ê¾¸ëŠ” ê²½ìš°ëŠ” 0ë²ˆ ë‚˜ë¨¸ì§€ëŠ” 1ë²ˆì˜ ìŠ¤ìœ„ì¹­
 		for (int c = 1; c <= k; c++)
 			dp[i][i][c] = (c != tmp);
 	}
 
 	int ans = 1e9;
-	// ¸ðµç Àü±¸¸¦ c·Î ¸¸µé ¶§
+	// ëª¨ë“  ì „êµ¬ë¥¼ cë¡œ ë§Œë“¤ ë•Œ
 	for (int c = 1; c <= k; c++)
 		ans = min(ans, dfs(0, n - 1, c));
 	cout << ans + 1 << endl;
@@ -49,11 +49,11 @@ int dfs(int left, int right, int num) {
 	if (ret != -1)	return ret;
 	ret = 1e9;
 
-	// 2°³ ±¸°£ÇÕÀÇ ÃÖ¼Ò
+	// 2ê°œ êµ¬ê°„í•©ì˜ ìµœì†Œ
 	for (int i = left; i < right; i++)
 		ret = min(ret, dfs(left, i, num) + dfs(i + 1, right, num));
 
-	// left - right ±¸°£À» ´Ù¸¥¹øÈ£·Î ¹Ù²Þ (½ºÀ§Ä¡ ÇÑ¹ø ´©¸§)
+	// left - right êµ¬ê°„ì„ ë‹¤ë¥¸ë²ˆí˜¸ë¡œ ë°”ê¿ˆ (ìŠ¤ìœ„ì¹˜ í•œë²ˆ ëˆ„ë¦„)
 	if (!check[left][right][num]) {
 		check[left][right][num] = 1;
 		for (int c = 1; c <= k; c++) {
@@ -75,6 +75,6 @@ int dfs(int left, int right, int num) {
   2 2 2			1	3	1		1 2	  2 1	
 	3
 
-2¹ø				3¹ø				4¹ø
+2ë²ˆ				3ë²ˆ				4ë²ˆ
 
 */

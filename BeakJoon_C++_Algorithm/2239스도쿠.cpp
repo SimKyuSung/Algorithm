@@ -1,4 +1,4 @@
-/// 2239½ºµµÄí
+/// 2239ìŠ¤ë„ì¿ 
 
 #include <iostream>
 #include <vector>
@@ -51,7 +51,7 @@ bool solve(int num) {
 	if (num == 81)	return true;
 	if (c4[y][x])	return solve(num + 1);
 
-	// ÇØ´ç Ä­¿¡ 0 ~ 9 ±îÁö ³Ö¾î º»´Ù (°¡´É ÇÑ°Ô ¾øÀ¸¸é false return;
+	// í•´ë‹¹ ì¹¸ì— 0 ~ 9 ê¹Œì§€ ë„£ì–´ ë³¸ë‹¤ (ê°€ëŠ¥ í•œê²Œ ì—†ìœ¼ë©´ false return;
 	for (int i = 1; i < 10; i++) {
 		if ((!c1[y][i]) && (!c2[x][i]) && (!c3[y / 3][x / 3][i])) {
 			c1[y][i] = true;

@@ -1,4 +1,4 @@
-/// 1027°íÃþ °Ç¹°
+/// 1027ê³ ì¸µ ê±´ë¬¼
 
 #include <iostream>
 #include <vector>
@@ -24,7 +24,7 @@ int main()
 
 	int ans = 0;
 	for (int i = 0; i < n; i++) {
-		// ¿À¸¥ÂÊ °Ë»ö
+		// ì˜¤ë¥¸ìª½ ê²€ìƒ‰
 		size_t x = i, y = 0;
 		for (int j = i + 1; j < n; j++) {
 			if (ccw(j, b[j], i, b[i], x, y) == 1) {

@@ -1,4 +1,4 @@
-/// 12279À¯¸®¼ö Æ®¸® (Large)
+/// 12279ìœ ë¦¬ìˆ˜ íŠ¸ë¦¬ (Large)
 
 #include <cstdio>
 #include <iostream>
@@ -21,7 +21,7 @@ int main()
 				bitMask <<= 1;
 			}
 			n = n - bitMask;
-			// n È£¼ö
+			// n í˜¸ìˆ˜
 			bitMask >>= 1;
 			while (bitMask) {
 				if (bitMask & n)	p = p + q;

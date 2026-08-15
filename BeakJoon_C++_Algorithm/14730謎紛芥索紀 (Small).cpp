@@ -1,4 +1,4 @@
-/// 14730ÚºÝÑËÎßãÑº (Small)
+/// 14730è¬Žç´›èŠ¥ç´¢ç´€ (Small)
 
 #include <iostream>
 #include <vector>

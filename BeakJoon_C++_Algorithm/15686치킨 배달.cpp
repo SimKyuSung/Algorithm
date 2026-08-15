@@ -1,4 +1,4 @@
-/// 15686Ä¡Å² ¹è´Þ
+/// 15686ì¹˜í‚¨ ë°°ë‹¬
 
 #include <iostream>
 #include <vector>
@@ -44,12 +44,12 @@ int main()
 
 	int ans = 1000000000;
 	do {
-		// °Å¸® °è»ê
+		// ê±°ë¦¬ ê³„ì‚°
 		int tmp1 = 0;
 		for (int i = 0; i < hou.size(); i++) {
 			int tmp2 = 100;
 			for (int j = 0; j < counter; j++) {
-				// Ä¡Å²Áý c¸¦ °ñ¶úÀ»¶§
+				// ì¹˜í‚¨ì§‘ cë¥¼ ê³¨ëžì„ë•Œ
 				if (c[j])
 					tmp2 = min(tmp2, abs(hou[i].x - chi[j].x) + abs(hou[i].y - chi[j].y));
 			}
@@ -64,7 +64,7 @@ int main()
 
 
 /*
-µå·¡°ï Ä¿ºê
+ë“œëž˜ê³¤ ì»¤ë¸Œ
 01:38:00
 */
 

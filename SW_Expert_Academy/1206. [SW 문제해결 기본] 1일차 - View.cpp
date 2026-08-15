@@ -1,4 +1,4 @@
-/// 1206. [S/W ¹®Á¦ÇØ°á ±âº»] 1ÀÏÂ÷ - View
+/// 1206. [S/W ë¬¸ì œí•´ê²° ê¸°ë³¸] 1ì¼ì°¨ - View
 
 #include <iostream>
 #include <algorithm>

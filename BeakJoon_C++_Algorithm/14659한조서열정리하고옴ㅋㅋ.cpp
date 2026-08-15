@@ -1,4 +1,4 @@
-/// 14659ÇÑÁ¶¼­¿­Á¤¸®ÇÏ°í¿È¤»¤»
+/// 14659í•œì¡°ì„œì—´ì •ë¦¬í•˜ê³ ì˜´ã…‹ã…‹
 
 #include <iostream>
 #include <queue>
@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// ÇÑÁ¶ ¸Ó±âÁß
+// í•œì¡° ë¨¸ê¸°ì¤‘
 vector <int> hanzo;
 
 int main()

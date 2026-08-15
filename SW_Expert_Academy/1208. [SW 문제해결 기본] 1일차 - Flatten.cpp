@@ -1,4 +1,4 @@
-/// 1208. [S/W ¹®Á¦ÇØ°á ±âº»] 1ÀÏÂ÷ - Flatten
+/// 1208. [S/W ë¬¸ì œí•´ê²° ê¸°ë³¸] 1ì¼ì°¨ - Flatten
 
 #include <iostream>
 #include <algorithm>

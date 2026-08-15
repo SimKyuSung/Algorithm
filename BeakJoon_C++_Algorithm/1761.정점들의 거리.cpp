@@ -1,4 +1,4 @@
-/// 1761.Á¤Á¡µéÀÇ °Å¸®
+/// 1761.ì •ì ë“¤ì˜ ê±°ë¦¬
 
 #include <iostream>
 #include <vector>
@@ -74,7 +74,7 @@ int getLCA(int a, int b) {
 	}
 
 	unsigned int ret = 0;
-	// ³ôÀÌ ¸ÂÃß±â
+	// ë†’ì´ ë§ì¶”ê¸°
 	while (depth[a] != depth[b]) {
 		int i = 16;
 		while (depth[p[a][i]] < depth[b])
@@ -82,7 +82,7 @@ int getLCA(int a, int b) {
 		a = p[a][i];
 	}
 
-	// LCA Ã£±â
+	// LCA ì°¾ê¸°
 	while (a != b) {
 		int i = 16;
 		while (i > 0 && p[a][i] == p[b][i])

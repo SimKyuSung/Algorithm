@@ -46,7 +46,7 @@ int main()
 				}
 			}
 
-	// Åä¸¶Åä ÀüÁø!
+	// í† ë§ˆí†  ì „ì§„!
 	while (!q.empty()) {
 		tomatoMove(q.front().first, q.front().second);
 		q.pop();
@@ -64,7 +64,7 @@ int main()
 void tomatoMove(cube c, int day) {
 	day++;
 	for (int i = 0; i < 6; i++) {
-		// ¾Æ¿ô¿Àºê ¹è¿­ °Ë»ç && Ä³½Ã °Ë»ç.
+		// ì•„ì›ƒì˜¤ë¸Œ ë°°ì—´ ê²€ì‚¬ && ìºì‹œ ê²€ì‚¬.
 		if (range_error1(c.x + moveX[i], c.y + moveY[i], c.z + moveZ[i])) {
 			p.first.x = c.x + moveX[i];
 			p.first.y = c.y + moveY[i];

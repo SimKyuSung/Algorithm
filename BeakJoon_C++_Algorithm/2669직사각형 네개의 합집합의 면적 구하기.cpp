@@ -1,4 +1,4 @@
-/// 2669Á÷»ç°¢Çü ³×°³ÀÇ ÇÕÁýÇÕÀÇ ¸éÀû ±¸ÇÏ±â
+/// 2669ì§ì‚¬ê°í˜• ë„¤ê°œì˜ í•©ì§‘í•©ì˜ ë©´ì  êµ¬í•˜ê¸°
 
 #include <iostream>
 #include <vector>
@@ -69,7 +69,7 @@ void intersection(int n, int index, int counter, Ret tmp) {
 }
 /*
 
-a, b, c, dÀÇ ÇÕÁýÇÕÀÇ ¸éÀû
+a, b, c, dì˜ í•©ì§‘í•©ì˜ ë©´ì 
 
 ab      = a + b - a^b
 abc      = a + b + c - a^b - a^c - b^c + a^b^c
@@ -85,8 +85,8 @@ c + d - c^d
 -(b^c + d - b^c^d)
 a^b^c + d - a^b^c^d
 
-È¦¼ö -> +
-Â¦¼ö -> -
+í™€ìˆ˜ -> +
+ì§ìˆ˜ -> -
 
 a + b + c + d
 - ab - ac - ad - bc - bd - cd

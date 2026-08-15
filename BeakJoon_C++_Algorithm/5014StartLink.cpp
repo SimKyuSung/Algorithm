@@ -8,7 +8,7 @@
 using namespace std;
 
 /*
-F Ã¤°í ³ôÀÌ
+F ì±„ê³  ë†’ì´
 S start
 G get in
 U up go

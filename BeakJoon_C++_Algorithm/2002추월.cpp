@@ -1,4 +1,4 @@
-/// 2002Ãß¿ù
+/// 2002ì¶”ì›”
 
 #include <iostream>
 #include <string>
@@ -24,7 +24,7 @@ int main()
 
 	for (int i = 0; i < n; i++) {
 		cin >> car;
-		// ¸Ç ¾ÕÀÌ ¾Æ´Ï¸é... Ãß¿ùÇÑ°ÅÀÓ
+		// ë§¨ ì•ì´ ì•„ë‹ˆë©´... ì¶”ì›”í•œê±°ì„
 		if (car_in.front() != car) {
 			itor = find(car_in.begin(), car_in.end(), car);
 			car_in.erase(itor);

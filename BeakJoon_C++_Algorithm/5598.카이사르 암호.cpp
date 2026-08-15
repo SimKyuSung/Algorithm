@@ -1,4 +1,4 @@
-/// 5598.ī�̻縣 ��ȣ
+/// 5598.카이사르 암호
 
 #include <iostream>
 #include <string>

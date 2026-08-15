@@ -74,7 +74,7 @@ int getLCA(int a, int b) {
 		a ^= b;
 	}
 
-	// ³ôÀÌ ¸ÂÃß±â
+	// ë†’ì´ ë§ì¶”ê¸°
 	while (depth[a] != depth[b]) {
 		//cout << a << endl;
 		int i = 20;
@@ -84,7 +84,7 @@ int getLCA(int a, int b) {
 		//cout << a << endl;
 	}
 
-	// °°Àº ³ôÀÌÀÇ °øÅë ºÎ¸ğ³ëµå Ã£±â
+	// ê°™ì€ ë†’ì´ì˜ ê³µí†µ ë¶€ëª¨ë…¸ë“œ ì°¾ê¸°
 	while (a != b) {
 		//cout << a << ' ' << b << endl;
 		int i = 20;

@@ -8,7 +8,7 @@ int main()
 	int damageB, healthB;
 	cin >> damageA >> healthA;
 	cin >> damageB >> healthB;
-	// µÑÁß ÇÏ³ªÀÇ Ã¼·ÂÀÌ 0ÀÌ µÉ¶§ ±îÁö ½Î¿ò
+	// ë‘˜ì¤‘ í•˜ë‚˜ì˜ ì²´ë ¥ì´ 0ì´ ë ë•Œ ê¹Œì§€ ì‹¸ì›€
 	while (healthA > 0 && healthB > 0) {
 		healthA -= damageB;
 		healthB -= damageA;

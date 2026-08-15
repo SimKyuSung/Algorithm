@@ -25,9 +25,9 @@ int main()
 {
 	cin >> N >> M;
 	
-	// mÇà ÀÔ·Â
+	// mí–‰ ìž…ë ¥
 	for (int i = 0; i < M; i++)
-		// n ¿­ ÀÔ·Â
+		// n ì—´ ìž…ë ¥
 		for (int j = 0; j < N; j++) {
 			cin >> tomato[i][j];
 			if (tomato[i][j] == 0)
@@ -43,7 +43,7 @@ int main()
 				cash[i][j] = true;
 			}
 		}
-	// Åä¸¶Åä ÀüÁø!
+	// í† ë§ˆí†  ì „ì§„!
 	while (!q.empty()) {
 		tomatoMove(q.front().first.first, q.front().first.second, q.front().second);
 		q.pop();
@@ -61,7 +61,7 @@ int main()
 void tomatoMove(int x, int y, int day) {
 	day++;
 	for (int i = 0; i < 4; i++) {
-		// ¾Æ¿ô¿Àºê ¹è¿­ °Ë»ç && Ä³½Ã °Ë»ç.
+		// ì•„ì›ƒì˜¤ë¸Œ ë°°ì—´ ê²€ì‚¬ && ìºì‹œ ê²€ì‚¬.
 		if (range_error1(x + moveX[i], y + moveY[i])) {
 			p.first.first = x + moveX[i];
 			p.first.second = y + moveY[i];

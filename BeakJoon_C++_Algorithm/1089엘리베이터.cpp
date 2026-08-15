@@ -1,4 +1,4 @@
-// 1089¿¤¸®º£ÀÌÅÍ
+// 1089ì—˜ë¦¬ë² ì´í„°
 
 #include <iostream>
 #include <string>
@@ -77,7 +77,7 @@ void init2(int n, string input[]) {
 }
 
 size_t makeCom() {
-	// 0Àº ¸Ç ¾ÕÀÚ¸®, n - 1Àº ¸ÇµŞÀÚ¸®
+	// 0ì€ ë§¨ ì•ìë¦¬, n - 1ì€ ë§¨ë’·ìë¦¬
 	size_t ans = 0;
 	for (int i = 0; i < n; i++) {
 		size_t tmp = 0;

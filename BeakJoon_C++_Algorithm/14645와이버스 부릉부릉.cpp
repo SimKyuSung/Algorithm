@@ -1,4 +1,4 @@
-/// 14645¿ÍÀÌ¹ö½º ºÎ¸ªºÎ¸ª
+/// 14645ì™€ì´ë²„ìŠ¤ ë¶€ë¦‰ë¶€ë¦‰
 
 #include <iostream>
 
@@ -8,5 +8,5 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(0);
-	cout << "ºñ¿ÍÀÌ\n";
+	cout << "ë¹„ì™€ì´\n";
 }

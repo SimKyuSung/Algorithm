@@ -1,4 +1,4 @@
-/// 10757Å«¼ö A+B
+/// 10757í°ìˆ˜ A+B
 
 #include <iostream>
 #include <vector>
@@ -16,7 +16,7 @@ int main()
 {
 	cin >> a >> b;
 
-	// Ç×»ó a°¡ ´õÅ©´ç
+	// í•­ìƒ aê°€ ë”í¬ë‹¹
 	if (a.size() < b.size())	swap(a, b);
 	reverse(a.begin(), a.end());
 	reverse(b.begin(), b.end());

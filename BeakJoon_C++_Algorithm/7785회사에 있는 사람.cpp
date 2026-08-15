@@ -1,4 +1,4 @@
-/// 7785ȸ�翡 �ִ� ���
+/// 7785회사에 있는 사람
 
 #include <iostream>
 #include <vector>

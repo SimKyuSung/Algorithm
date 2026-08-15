@@ -48,7 +48,7 @@ void vectorMatching(int index, int xx, int yy, int counter) {
 			ans = min(ans, size_t(xs - xx - xx) * (xs - xx - xx) + size_t(ys - yy - yy) * (ys - yy - yy));
 		return;
 	}
-	// »ı¼º ÇÒ¼ö ÀÖ´Â ¹éÅÍ¸ÇÀÌ ¾øÀ¸¸é Á¾·á
+	// ìƒì„± í• ìˆ˜ ìˆëŠ” ë°±í„°ë§¨ì´ ì—†ìœ¼ë©´ ì¢…ë£Œ
 	if (n / 2 - index + counter < 0)	return;
 	vectorMatching(index + 1, xx + x[index], yy + y[index], counter + 1);
 	vectorMatching(index + 1, xx, yy, counter);
@@ -56,7 +56,7 @@ void vectorMatching(int index, int xx, int yy, int counter) {
 
 /*
 
-°¢ Æ÷ÀÎÆ®´Â (0, 0)À¸·Î ºÎÅÍ º¤ÅÍ¿Í °°´Ù 
+ê° í¬ì¸íŠ¸ëŠ” (0, 0)ìœ¼ë¡œ ë¶€í„° ë²¡í„°ì™€ ê°™ë‹¤ 
 
 2
 4

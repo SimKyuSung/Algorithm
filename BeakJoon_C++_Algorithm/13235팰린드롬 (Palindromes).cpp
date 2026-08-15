@@ -1,4 +1,4 @@
-/// 13235ÆÓ¸°µå·Ò (Palindromes)
+/// 13235íŒ°ë¦°ë“œë¡¬ (Palindromes)
 
 #include <iostream>
 #include <vector>

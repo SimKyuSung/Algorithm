@@ -1,4 +1,4 @@
-/// 9613GCDÇÕ
+/// 9613GCDí•©
 
 #include <iostream>
 

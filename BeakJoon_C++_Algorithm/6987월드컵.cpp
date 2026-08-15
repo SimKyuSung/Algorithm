@@ -1,4 +1,4 @@
-/// 6987¿ùµåÄÅ
+/// 6987ì›”ë“œì»µ
 
 #include <cstdio>
 #include <iostream>
@@ -30,7 +30,7 @@ int main()
 	cout << "\n";
 }
 
-// x°¡ y »ó´ë·Î
+// xê°€ y ìƒëŒ€ë¡œ
 bool solve(int x, int y) {
 	if (x == 5)
 		return true;

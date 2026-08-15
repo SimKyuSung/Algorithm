@@ -1,11 +1,11 @@
-/// 1399º¸¹°ÀÇ À§Ä¡
+/// 1399ë³´ë¬¼ì˜ ìœ„ì¹˜
 
 #include <iostream>
 #include <vector>
 
 using namespace std;
 
-// ºÏ, ¼­, ³², µ¿
+// ë¶, ì„œ, ë‚¨, ë™
 int dx[4] = { 0, 1, 0, -1 };
 int dy[4] = { 1, 0, -1, 0 };
 
@@ -21,7 +21,7 @@ int main()
 		long long x = 0, y = 0;
 		cin >> k >> m;
 
-		// cycle Ã£±â
+		// cycle ì°¾ê¸°
 		vector < pair<int, int> > cycle;
 		bool f = false;
 		int s;
@@ -63,7 +63,7 @@ input
 k <= 1000000000
 m <= 1000
 
-k °¡ 10^9 ÀÓÀ¸·Î ½ÎÀÌÅ¬À» Ã£¾Æ¾ß ÇÑ´Ù.
+k ê°€ 10^9 ì„ìœ¼ë¡œ ì‹¸ì´í´ì„ ì°¾ì•„ì•¼ í•œë‹¤.
 m = 1	1 1 1 1  1  1  1  1
 
 m = 2	1 2 4 8  16 14 10 

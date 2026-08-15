@@ -19,7 +19,7 @@ int main()
 	line[0] = n;
 	int x = n - 1;
 	for (int i = 1; i < n; i++) {
-		// »ğÀÔÁ¡ Ã£±â
+		// ì‚½ì…ì  ì°¾ê¸°
 		insert = 0;
 		int j = 0;
 		while (tall[i] && j <= i) {
@@ -29,7 +29,7 @@ int main()
 			}
 			j++;
 		}
-		// »ğÀÔ ÇÏ±â
+		// ì‚½ì… í•˜ê¸°
 		for (j = i + 1; j > insert; j--)
 			line[j] = line[j - 1];
 		line[insert] = x--;
@@ -41,7 +41,7 @@ int main()
 }
 /*
 
-°Å²Ù·Î ÃßÀûÇÑ´Ù.
+ê±°ê¾¸ë¡œ ì¶”ì í•œë‹¤.
 
 4
 4 3

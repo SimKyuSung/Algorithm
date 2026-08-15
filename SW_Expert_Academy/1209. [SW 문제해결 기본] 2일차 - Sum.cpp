@@ -1,4 +1,4 @@
-/// 1209. [S/W ¹®Á¦ÇØ°á ±âº»] 2ÀÏÂ÷ - Sum 
+/// 1209. [S/W ë¬¸ì œí•´ê²° ê¸°ë³¸] 2ì¼ì°¨ - Sum 
 
 #include <iostream>
 #include <algorithm>

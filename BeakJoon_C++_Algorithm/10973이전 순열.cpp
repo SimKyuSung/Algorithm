@@ -1,4 +1,4 @@
-/// 10973ÀÌÀü ¼ø¿­
+/// 10973ì´ì „ ìˆœì—´
 
 #include <iostream>
 #include <vector>

@@ -1,4 +1,4 @@
-/// 14488.�ؿ��� �޽����̾�!!
+/// 14488.준오는 급식충이야!!
 
 #include <iostream>
 #include <string>

@@ -1,4 +1,4 @@
-/// 11729ÇÏ³ëÀÌ Å¾ ÀÌµ¿ ¼ø¼­
+/// 11729í•˜ë…¸ì´ íƒ‘ ì´ë™ ìˆœì„œ
 
 #include <cstdio>
 #include <iostream>
@@ -20,7 +20,7 @@ void hanoi(int n, int a, int b) {
 		printf("%d %d\n", a + 1, b + 1);
 		return;
 	}
-	// nÀÌ 2ÀÌ»ó ÀÏ¶§
+	// nì´ 2ì´ìƒ ì¼ë•Œ
 	int c = 3 - (a + b);
 	// 1. a -> c
 	hanoi(n - 1, a, c);

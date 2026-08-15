@@ -1,4 +1,4 @@
-/// 1989. �ʽ����� ȸ�� �˻�
+/// 1989. 초심자의 회문 검사
 
 #include <iostream>
 #include <string>

@@ -1,4 +1,4 @@
-/// 5692ÆÑÅä¸®¾ó Áø¹ý
+/// 5692íŒ©í† ë¦¬ì–¼ ì§„ë²•
 
 #include <iostream>
 #include <cstdio>

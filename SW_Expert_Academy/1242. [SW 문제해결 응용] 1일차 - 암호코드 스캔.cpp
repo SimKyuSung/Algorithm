@@ -1,4 +1,4 @@
-/// 1242. [S/W ¹®Á¦ÇØ°á ÀÀ¿ë] 1ÀÏÂ÷ - ¾ÏÈ£ÄÚµå ½ºÄµ
+/// 1242. [S/W ë¬¸ì œí•´ê²° ì‘ìš©] 1ì¼ì°¨ - ì•”í˜¸ì½”ë“œ ìŠ¤ìº”
 
 #include <iostream>
 #include <string>
@@ -57,14 +57,14 @@ int main()
 			string line;
 			cin >> line;
 
-			// 16Áø¼ö -> 2Áø¼ö
+			// 16ì§„ìˆ˜ -> 2ì§„ìˆ˜
 			for (int j = 0; j < m; j++) {
 				int num = chex[line[j]];
 				for (int count4 = 0; count4 < 4; count4++)
 					codeLine[j * 4 + count4] = mask[num][3 - count4];
 			}
 
-			// ÀÌÁø ÄÚµå Ãâ·Â
+			// ì´ì§„ ì½”ë“œ ì¶œë ¥
 			//for (int j = 0; j < m * 4; j++)
 			//	cout << codeLine[j];
 			//cout << endl;
@@ -72,7 +72,7 @@ int main()
 			for (int j = m * 4 - 1; j >= 0; j--) {
 				vector <int> code;
 				if (codeLine[j]) {
-					// µğÄÚµù
+					// ë””ì½”ë”©
 					code = decodeTest(j);
 					if (code.size() == 9)
 						j -= 56 * code[8] - 1;
@@ -108,14 +108,14 @@ int main()
 }
 
 /*
-code ¸¦ ¹İÈ¯, ½ÇÆĞ½Ã Null ¸®ÅÏ
+code ë¥¼ ë°˜í™˜, ì‹¤íŒ¨ì‹œ Null ë¦¬í„´
 */
 
 vector<int> decodeTest(int j) {
 	vector <int> code(9, -1);
 	code[8] = 1;
 	memset(x, 0, sizeof(x));
-	// ÄÚµå ±æÀÌ ±âÁØ ¸¸µé±â
+	// ì½”ë“œ ê¸¸ì´ ê¸°ì¤€ ë§Œë“¤ê¸°
 	int d = 3;
 	bool now = 1;
 	do {
@@ -131,7 +131,7 @@ vector<int> decodeTest(int j) {
 	j++;
 	code[8] = (x[0] + x[1] + x[2] + x[3]) / 7;
 
-	//  cry °Ë»ö
+	//  cry ê²€ìƒ‰
 	int num;
 	for (num = 0; num < 10; num++) {
 		int match = 0;
@@ -145,7 +145,7 @@ vector<int> decodeTest(int j) {
 		return vector <int> ();
 	code[7] = num;
 
-	// ±âÁØ ÄÚµå Ãâ·Â
+	// ê¸°ì¤€ ì½”ë“œ ì¶œë ¥
 	//for (int i = 0; i < 4; i++)
 	//	cout << x[i] << ' ';
 	//cout << endl;
@@ -166,12 +166,12 @@ vector<int> decodeTest(int j) {
 			j--;
 		} while (x[0] + x[1] + x[2] + x[3] != 7 * code[8]);
 
-		// ÄÚµå Ãâ·Â
+		// ì½”ë“œ ì¶œë ¥
 		//for (int i = 0; i < 4; i++)
 		//	cout << x[i] << ' ';
 		//cout << endl;
 
-		//  cry °Ë»ö
+		//  cry ê²€ìƒ‰
 		for (num = 0; num < 10; num++) {
 			int match = 0;
 			for (int num4 = 0; num4 < 4; num4++) {
@@ -193,7 +193,7 @@ vector<int> decodeTest(int j) {
 }
 
 /*
-ÄÚµå °ËÁõ
+ì½”ë“œ ê²€ì¦
 */
 bool ven(vector<int> code) {
 	if (code.size() != 9)

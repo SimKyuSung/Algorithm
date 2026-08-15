@@ -1,4 +1,4 @@
-/// 3260. µÎ ¼öÀÇ µ¡¼À
+/// 3260. ë‘ ìˆ˜ì˜ ë§ì…ˆ
 
 #include <iostream>
 #include <string>
@@ -50,7 +50,7 @@ BigNum::BigNum(int n, BigNum a, BigNum b) {
 	next = NULL;
 	bool carry = n >= LIM;
 	
-	// 8°¡Áö °æ¿ìÀÇ ¼ö 
+	// 8ê°€ì§€ ê²½ìš°ì˜ ìˆ˜ 
 	n = a.num + b.num + carry;
 	if (a.next != NULL && b.next != NULL) {
 		next = new BigNum(n, *a.next, *b.next);
@@ -69,7 +69,7 @@ BigNum::BigNum(int n, BigNum a) {
 	next = NULL;
 	bool carry = n >= LIM;
 
-	// 4°¡Áö °æ¿ìÀÇ¼ö
+	// 4ê°€ì§€ ê²½ìš°ì˜ìˆ˜
 	n = a.num + carry;
 	if (a.next != NULL)
 		next = new BigNum(n, *a.next);

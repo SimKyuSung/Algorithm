@@ -1,4 +1,4 @@
-/// 16234.ÀÎ±¸ ÀÌµ¿
+/// 16234.ì¸êµ¬ ì´ë™
 
 #include <iostream>
 #include <memory.h>

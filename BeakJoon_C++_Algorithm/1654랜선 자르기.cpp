@@ -1,4 +1,4 @@
-/// 1654 ·£¼± ÀÚ¸£±â
+/// 1654 ëœì„  ìë¥´ê¸°
 
 #include <iostream>
 #include <vector>
@@ -23,15 +23,15 @@ int main()
 	while (left <= right) {
 		unsigned int mid = left + (right - left) / 2;
 		
-		// mid·Î Àß¶úÀ»¶§ °¹¼ö
+		// midë¡œ ì˜ëì„ë•Œ ê°¯ìˆ˜
 		int counter = 0;
 		for (int i = 0; i < k; i++)
 			counter += lanCable[i] / mid;
 
-		// 1. °¹¼ö°¡ ¸ğÀÚ¶ó¸é Å©°Ô Àß¶úÀ½
+		// 1. ê°¯ìˆ˜ê°€ ëª¨ìë¼ë©´ í¬ê²Œ ì˜ëìŒ
 		if (counter < n)
 			right = mid - 1;
-		// 2. °°°Å³ª Å©¸é ÀÛ°Ô Àß¶úÀ½
+		// 2. ê°™ê±°ë‚˜ í¬ë©´ ì‘ê²Œ ì˜ëìŒ
 		else
 			left = mid + 1;
 		//cout << left << " " << right << endl;

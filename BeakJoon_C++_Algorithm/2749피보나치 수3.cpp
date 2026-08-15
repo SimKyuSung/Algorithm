@@ -1,4 +1,4 @@
-/// 2749ÇÇº¸³ªÄ¡ ¼ö3
+/// 2749í”¼ë³´ë‚˜ì¹˜ ìˆ˜3
 // https://www.acmicpc.net/blog/view/28
 
 #include <iostream>

@@ -11,7 +11,7 @@ long long solve(int, int, int, int);
 int main()
 {
 	int	N, R, G, B;
-	memset(dpTable, -1, sizeof(dpTable));	// 1¹ÙÀÌÆ® ´ÜÀ§·Î 0xff·Î ÃÊ±âÈ­
+	memset(dpTable, -1, sizeof(dpTable));	// 1ë°”ì´íŠ¸ ë‹¨ìœ„ë¡œ 0xffë¡œ ì´ˆê¸°í™”
 	cin >> N >> R >> G >> B;
 	cout << solve(N, R, G, B) << endl;
 }
@@ -24,14 +24,14 @@ long long solve(int n, int r, int g, int b) {
 	int temp;
 	ref = 0;
 	
-	// 1»öÀ¸·Î Ã¤¿ï¶§, nÀÌ 1ÀÇ ¹è¼ö -> 1, 2, 3, 4, 5 , 6, 7, 8, 9, 10
+	// 1ìƒ‰ìœ¼ë¡œ ì±„ìš¸ë•Œ, nì´ 1ì˜ ë°°ìˆ˜ -> 1, 2, 3, 4, 5 , 6, 7, 8, 9, 10
 	if (r >= n) ref += solve(n - 1, r - n, g, b);
 	if (g >= n) ref += solve(n - 1, r, g - n, b);
 	if (b >= n) ref += solve(n - 1, r, g, b - n);
 
-	// 2»öÀ¸·Î Ã¤¿ï¶§, nÀÌ 2ÀÇ ¹è¼ö -> 2, 4, 6, 8, 10
+	// 2ìƒ‰ìœ¼ë¡œ ì±„ìš¸ë•Œ, nì´ 2ì˜ ë°°ìˆ˜ -> 2, 4, 6, 8, 10
 	if (n % 2 == 0) {
-		// ¹èÄ¡ ¼ø¼­°ö 2* temp C temp 
+		// ë°°ì¹˜ ìˆœì„œê³± 2* temp C temp 
 		temp = n / 2;
 		if (r >= temp && g >= temp)
 			ref += solve(n - 1, r - temp, g - temp, b) * combina(2 * temp, temp);
@@ -41,9 +41,9 @@ long long solve(int n, int r, int g, int b) {
 			ref += solve(n - 1, r, g - temp, b - temp) * combina(2 * temp, temp);
 	}
 	
-	// 3¼½À¸·Î Ã¤¿ï¶§, nÀÌ 3ÀÇ ¹è¼ö -> 3, 6, 9
+	// 3ì„¹ìœ¼ë¡œ ì±„ìš¸ë•Œ, nì´ 3ì˜ ë°°ìˆ˜ -> 3, 6, 9
 	if (n % 3 == 0) {
-		// ¹èÄ¡ ¼ø¼­°ö (3 * temp C tmep) * (2 * temp C temp) 
+		// ë°°ì¹˜ ìˆœì„œê³± (3 * temp C tmep) * (2 * temp C temp) 
 		temp = n / 3;
 		if (r >= temp && g >= temp && b >= temp)
 			ref += solve(n - 1, r - temp, g - temp, b - temp) * combina(3 * temp, temp) * combina(2 * temp, temp);

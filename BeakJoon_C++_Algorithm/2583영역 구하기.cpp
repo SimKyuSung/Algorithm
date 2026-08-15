@@ -1,4 +1,4 @@
-/// 2583©╣©╙ ╠╦го╠Б
+/// 2583Л≤│Л≈╜ Й╣╛М∙≤Й╦╟
 
 #include <iostream>
 #include <vector>

@@ -1,5 +1,5 @@
-/// 15955.ºÎ½ºÅÍ
-/// D¹ø - ºÎ½ºÅÍ
+/// 15955.ë¶€ìŠ¤í„°
+/// Dë²ˆ - ë¶€ìŠ¤í„°
 
 #include <iostream>
 #include <string>
@@ -72,13 +72,13 @@ int main()
 	sort(sortX.begin(), sortX.end());
 	sort(sortY.begin(), sortY.end());
 	sort(query.begin(), query.end());
-	// pq¿¡ ÀÎÁ¢ ÇÑ Á¡µéÀÇ °Å¸®ÀÔ·Â
+	// pqì— ì¸ì ‘ í•œ ì ë“¤ì˜ ê±°ë¦¬ì…ë ¥
 	for (int i = 1; i < n; i++) {
 		pq.push({ (sortX[i].d - sortX[i - 1].d), sortX[i].i, sortX[i - 1].i });
 		pq.push({ (sortY[i].d - sortY[i - 1].d), sortY[i].i, sortY[i - 1].i });
 	}
 
-	// x or y °°Àº °ª marge
+	// x or y ê°™ì€ ê°’ marge
 	for (int i = 0; i < q; i++) {
 		a = query[i].a;
 		b = query[i].b;

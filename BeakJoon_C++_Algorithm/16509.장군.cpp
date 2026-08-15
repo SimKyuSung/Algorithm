@@ -1,4 +1,4 @@
-/// 16509.�屺
+/// 16509.장군
 
 //#include <bits/stdc++.h>
 #include <iostream>

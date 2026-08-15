@@ -1,4 +1,4 @@
-/// 15712.µîºñ¼ö¿­
+/// 15712.ë“±ë¹„ìˆ˜ì—´
 
 #include <iostream>
 
@@ -27,7 +27,7 @@ int main()
 size_t powermod(size_t base, size_t exp, size_t mod) {
 	size_t ans = 1, x = base % mod;
 	while (exp) {
-		// 1½Â¼ö ÀÖÀ¸¸é °öÇØ¼­ Á¦°Å
+		// 1ìŠ¹ìˆ˜ ìžˆìœ¼ë©´ ê³±í•´ì„œ ì œê±°
 		if (exp % 2)
 			ans = (ans * x) % mod;
 		// 2	4	16	256

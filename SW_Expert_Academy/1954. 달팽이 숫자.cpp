@@ -1,4 +1,4 @@
-/// 1954. ´Þֶ״ְּ ¼‎ְÚ
+/// 1954. כ‹¬ם½ל´ לˆ«ל
 
 #include <iostream>
 #include <memory.h>

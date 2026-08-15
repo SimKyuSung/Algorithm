@@ -1,4 +1,4 @@
-/// 5373.Å¥ºù
+/// 5373.íë¹™
 
 #include <iostream>
 #include <string>
@@ -265,10 +265,10 @@ void spin(bool z, bool y, bool x, bool d) {
 	1
 	3
 
-Ç¥¸éÀû
+í‘œë©´ì 
 9 * 6 = 54
 
-ºÎÇÇ
+ë¶€í”¼
 3 * 3 * 3 = 27
 
 

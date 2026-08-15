@@ -1,4 +1,4 @@
-/// 14890.°æ»ç·Î
+/// 14890.ê²½ì‚¬ë¡œ
 
 #include <iostream>
 #include <vector>
@@ -35,12 +35,12 @@ int function(vector <vector <int> > map) {
 	for (int i = 0; i < n; i++) {
 		int x = map[i][0], counter = 1;
 		for (int j = 1; j < n; j++) {
-			// 1 + ¿À¸£¸·
+			// 1 + ì˜¤ë¥´ë§‰
 			if (x + 1 == map[i][j] && counter >= l) {
 				counter = 1;
 				x = map[i][j];
 			}
-			// 1 - ³»¸®¸·
+			// 1 - ë‚´ë¦¬ë§‰
 			else if (x - 1 == map[i][j]) {
 				x = map[i][j];
 				bool flag = j + l <= n;
@@ -55,11 +55,11 @@ int function(vector <vector <int> > map) {
 					break;
 				}
 			}
-			// ÆòÁö
+			// í‰ì§€
 			else if (map[i][j] == x) {
 				counter++;
 			}
-			// ÀÀ?
+			// ì‘?
 			else {
 				ret++;
 				break;

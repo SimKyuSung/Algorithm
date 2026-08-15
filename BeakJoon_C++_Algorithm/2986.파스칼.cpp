@@ -1,4 +1,4 @@
-/// 2986.�Ľ�Į
+/// 2986.파스칼
 
 #include <iostream>
 #include <vector>

@@ -1,4 +1,4 @@
-/// 1984. �߰� ��հ� ���ϱ�
+/// 1984. 중간 평균값 구하기
 
 #include <iostream>
 #include <algorithm>

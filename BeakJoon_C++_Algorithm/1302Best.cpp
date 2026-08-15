@@ -32,7 +32,7 @@ int main()
 		else
 			key = i;
 	}
-	// max_element		-> ¿ø¼ÒÁß ÃÖ´ë°ªÀÇ iterator °ª ¹ÝÈ¯, (*max_element ¸¦ ÇÏ¸é °ªÀ» ¹ÝÈ¯)
-	// distance(a, b)	-> a ¿Í b ±îÁö °Å¸®¸¦ ¹ÝÈ¯
+	// max_element		-> ì›ì†Œì¤‘ ìµœëŒ€ê°’ì˜ iterator ê°’ ë°˜í™˜, (*max_element ë¥¼ í•˜ë©´ ê°’ì„ ë°˜í™˜)
+	// distance(a, b)	-> a ì™€ b ê¹Œì§€ ê±°ë¦¬ë¥¼ ë°˜í™˜
 	cout << book[distance(bestSeller.begin(), max_element(bestSeller.begin(), bestSeller.end()))] << endl;
 }

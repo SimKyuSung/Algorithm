@@ -1,4 +1,4 @@
-/// 1028´Ù¾ß¸óµå ±¤»ê
+/// 1028ë‹¤ì•¼ëª¬ë“œ ê´‘ì‚°
 
 #include <cstdio>
 #include <iostream>

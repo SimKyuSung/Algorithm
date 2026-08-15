@@ -1,4 +1,4 @@
-/// 13505µÎ ¼ö XOR
+/// 13505ë‘ ìˆ˜ XOR
 
 #include <iostream>
 #include <vector>
@@ -11,7 +11,7 @@ vector < bitset<32> > a;
 
 class Trie {
 public:
-	// left, right 2Áø Æ®¸® (0, 1)
+	// left, right 2ì§„ íŠ¸ë¦¬ (0, 1)
 	Trie *next[2];
 	void insert(bitset<32>, int);
 	int query(bitset<32>, int);
@@ -29,7 +29,7 @@ void Trie::insert(bitset<32> a, int counter) {
 	next[nextNode]->insert(a, counter - 1);
 }
 int Trie::query(bitset<32> a, int counter) {
-	// ³»°¡ Æ®¸®»ó¿¡ Á¸Àç ÇÔÀ¸·Î NULL°ªÀº °ÆÁ¤ ÇÏÁö ¾Ê´Â´Ù.
+	// ë‚´ê°€ íŠ¸ë¦¬ìƒì— ì¡´ì¬ í•¨ìœ¼ë¡œ NULLê°’ì€ ê±±ì • í•˜ì§€ ì•ŠëŠ”ë‹¤.
 	if (counter == 0) return 0;
 
 	int nextNode = !a[counter - 1];

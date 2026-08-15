@@ -1,4 +1,4 @@
-/// 1373_2Áø¼ö 8Áø¼ö
+/// 1373_2ì§„ìˆ˜ 8ì§„ìˆ˜
 
 #include <iostream>
 #include <stack>

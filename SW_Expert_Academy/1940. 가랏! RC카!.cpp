@@ -1,4 +1,4 @@
-/// 1940. °¡¶ù! RCÄ«!
+/// 1940. ê°€ë! RCì¹´!
 
 #include <iostream>
 
@@ -16,7 +16,7 @@ int main()
 		int n, d = 0, v = 0;
 		cin >> n;
 		for (int i = 0; i < n; i++) {
-			int cmd, a;	// ¿¢¼¿·¹ÀÌÅÍ aÀÎ°¡?
+			int cmd, a;	// ì—‘ì…€ë ˆì´í„° aì¸ê°€?
 			cin >> cmd;
 			if (cmd) {
 				cin >> a;

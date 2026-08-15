@@ -1,4 +1,4 @@
-/// 1860. ������ �ְ��� �ؾ
+/// 1860. 진기의 최고급 붕어빵
 
 #include <iostream>
 #include <vector>

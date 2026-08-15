@@ -1,4 +1,4 @@
-/// 1541ÀÒ¾î¹ö¸° °ıÈ£
+/// 1541ìƒì–´ë²„ë¦° ê´„í˜¸
 
 #include <iostream>
 #include <string>
@@ -24,7 +24,7 @@ int main()
 	}
 	cout << ans << endl;
 
-	//// ÆÄ½Ì ÇØ¼­ ÇØº¸±â
+	//// íŒŒì‹± í•´ì„œ í•´ë³´ê¸°
 	//int a[51] = { 0, }, counter = 0;
 	//char op[51];
 	//bool f = false;
@@ -32,7 +32,7 @@ int main()
 
 	//cin >> s;
 
-	//// 1. ¼ıÀÚ, ¹®ÀÚ ÆÄ½Ì
+	//// 1. ìˆ«ì, ë¬¸ì íŒŒì‹±
 	//for (int i = 0; i < s.length(); i++) {
 	//	if (s[i] == '-' || s[i] == '+') {
 	//		counter++;
@@ -44,7 +44,7 @@ int main()
 	//	}
 	//}
 
-	//// 2. °è»ê
+	//// 2. ê³„ì‚°
 	//for (int i = 1; i <= counter; i++) {
 	//	if (op[i] == '-') f = true;
 	//	if (f)	a[0] -= a[i];

@@ -1,4 +1,4 @@
-/// 2930. Èü_2
+/// 2930. íž™_2
 
 #include <iostream>
 #include <queue>

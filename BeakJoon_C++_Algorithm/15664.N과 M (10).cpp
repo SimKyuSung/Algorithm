@@ -1,4 +1,4 @@
-/// 15664.N°ú M (10)
+/// 15664.Nê³¼ M (10)
 
 #include <iostream>
 #include <vector>

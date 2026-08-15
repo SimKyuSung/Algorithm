@@ -1,4 +1,4 @@
-/// 1240. [S/W ¹®Á¦ÇØ°á ÀÀ¿ë] 1ÀÏÂ÷ - ´Ü¼ø 2Áø ¾ÏÈ£ÄÚµå
+/// 1240. [S/W ë¬¸ì œí•´ê²° ì‘ìš©] 1ì¼ì°¨ - ë‹¨ìˆœ 2ì§„ ì•”í˜¸ì½”ë“œ
 
 #include <iostream>
 #include <string>
@@ -48,7 +48,7 @@ int main()
 			for (int j = m - 1; j >= 0; j--) {
 				vector <int> code;
 				if (codeLine[i][j] != '0') {
-					// µğÄÚµù
+					// ë””ì½”ë”©
 					code = decode(i, j);
 					j -= 55;
 				}
@@ -82,7 +82,7 @@ int main()
 }
 
 /*
-code ¸¦ ¹İÈ¯, ½ÇÆĞ½Ã Null ¸®ÅÏ
+code ë¥¼ ë°˜í™˜, ì‹¤íŒ¨ì‹œ Null ë¦¬í„´
 */
 vector<int> decode(int i, int j) {
 	vector <int> code(8, -1);
@@ -116,7 +116,7 @@ vector<int> decode(int i, int j) {
 }
 
 /*
-ÄÚµå °ËÁõ
+ì½”ë“œ ê²€ì¦
 */
 bool ven(vector<int> code) {
 	if (code.size() != 8)

@@ -1,4 +1,4 @@
-/// 11052�ؾ �Ǹ��ϱ�
+/// 11052붕어빵 판매하기
 
 #include <iostream>
 #include <vector>

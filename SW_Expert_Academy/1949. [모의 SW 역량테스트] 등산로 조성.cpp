@@ -1,4 +1,4 @@
-/// 1949. [¸ğÀÇ SW ¿ª·®Å×½ºÆ®] µî»ê·Î Á¶¼º
+/// 1949. [ëª¨ì˜ SW ì—­ëŸ‰í…ŒìŠ¤íŠ¸] ë“±ì‚°ë¡œ ì¡°ì„±
 
 #include <iostream>
 #include <vector>
@@ -76,7 +76,7 @@ int deepWay(int y, int x) {
 	if (ret != 0) return ret;
 	ret = 0;
 
-	// 4¹æÇâ °Ë»ö
+	// 4ë°©í–¥ ê²€ìƒ‰
 	for (int d = 0; d < 4; d++) {
 		int nx = x + dx[d];
 		int ny = y + dy[d];

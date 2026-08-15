@@ -1,4 +1,4 @@
-/// 14226.ÀÌ¸ğÆ¼ÄÜ
+/// 14226.ì´ëª¨í‹°ì½˜
 
 #include <iostream>
 #include <queue>
@@ -34,12 +34,12 @@ int main()
 		int t = check[dis][cb];
 		q.pop();
 
-		// 1. Å¬¸³º¸µå ÀúÀå
+		// 1. í´ë¦½ë³´ë“œ ì €ì¥
 		if (check[dis][dis] == -1) {
 			check[dis][dis] = t + 1;
 			q.push({ dis, dis });
 		}
-		// 2. Å¬¸³º¸µå ºÙ¿©³Ö±â
+		// 2. í´ë¦½ë³´ë“œ ë¶™ì—¬ë„£ê¸°
 		if (dis + cb < 1004 && check[dis + cb][cb] == -1) {
 			if (dis + cb == s) {
 				cout << t + 1 << endl;

@@ -13,14 +13,14 @@ int main()
 
 	cin >> n;
 
-	// 1ео ют╥б
+	// 1М└╢ Л·┘К═╔
 	cin >> cmd;
 	ans = cmd;
 	strLen = ans.length();
 
 	while (--n) {
 		cin >> cmd;
-		// ans ©м cmd©м ╨Я╠Ё го©╘ ╢ы╦╔ ╨н╨п "?" цЁ╦╝
+		// ans Л≥─ cmdЛ≥─ К╧└Й╣░ М∙≤Л≈╛ К▀╓К╔╦ К╤─К╤└ "?" Л╡≤К╕╛
 		for (int i = 0; i < strLen; i++)
 			if (cmd[i] != ans[i])
 				ans[i] = '?';

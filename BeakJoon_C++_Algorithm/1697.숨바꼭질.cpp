@@ -1,4 +1,4 @@
-/// 1697.¼û¹Ù²ÀÁú
+/// 1697.ìˆ¨ë°”ê¼­ì§ˆ
 
 #include <iostream>
 #include <queue>

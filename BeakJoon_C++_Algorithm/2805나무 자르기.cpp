@@ -1,4 +1,4 @@
-/// 2805³ª¹« ÀÚ¸£±â
+/// 2805ë‚˜ë¬´ ìë¥´ê¸°
 
 #include <iostream>
 #include <vector>
@@ -23,16 +23,16 @@ int main()
 	while (left <= right) {
 		int mid = left + (right - left) / 2;
 
-		// °¡Á®°¡´Â ³ª¹«ÀÇ ¾ç
+		// ê°€ì ¸ê°€ëŠ” ë‚˜ë¬´ì˜ ì–‘
 		long long total = 0;
 		for (int i = 0; i < n; i++) {
 			int x = tree[i] - mid;
 			if (x > 0) total += x;
 		}
-		// 1. ¸ğÀÚ¸§
+		// 1. ëª¨ìë¦„
 		if (m > total)
 			right = mid - 1;
-		// 2. ³Ê¹« ¸¹ÀÌ ÀÚ¸§
+		// 2. ë„ˆë¬´ ë§ì´ ìë¦„
 		else
 			left = mid + 1;
 		//cout << left << " " << right << endl;

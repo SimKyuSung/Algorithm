@@ -1,4 +1,4 @@
-/// 2527직사각형
+/// 2527吏곸궗媛곹삎
 
 #include <iostream>
 #include <vector>

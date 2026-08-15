@@ -1,4 +1,4 @@
-/// 13216╧Х╣Е╧нео
+/// 13216К╟╟К⌠°К╞╪М└╢
 
 #include <iostream>
 #include <string>

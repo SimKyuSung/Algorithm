@@ -1,4 +1,4 @@
-/// 2046. ½ºÅÆÇÁ Âï±â
+/// 2046. ìŠ¤íƒ¬í”„ ì°ê¸°
 
 #include <iostream>
 #include <memory.h>

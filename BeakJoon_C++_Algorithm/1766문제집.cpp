@@ -1,4 +1,4 @@
-/// 1766¹®Á¦Áý
+/// 1766ë¬¸ì œì§‘
 
 #include <iostream>
 #include <vector>

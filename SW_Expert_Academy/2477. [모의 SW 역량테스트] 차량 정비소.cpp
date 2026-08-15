@@ -1,4 +1,4 @@
-/// 2477. [¸ğÀÇ SW ¿ª·®Å×½ºÆ®] Â÷·® Á¤ºñ¼Ò
+/// 2477. [ëª¨ì˜ SW ì—­ëŸ‰í…ŒìŠ¤íŠ¸] ì°¨ëŸ‰ ì •ë¹„ì†Œ
 
 #include <iostream>
 #include <queue>
@@ -18,9 +18,9 @@ int ai[20], bj[20];
 int aTime[20], bTime[20];
 int ac[20], bc[20];
 
-// Á¢¼öÃ¢±¸ ÁÙ¼­´Â »ç¶÷
+// ì ‘ìˆ˜ì°½êµ¬ ì¤„ì„œëŠ” ì‚¬ëŒ
 priority_queue <int> receiveLine;
-// Á¤ºñÃ¢±¸ ÁÙ¼­´Â »ç¶÷
+// ì •ë¹„ì°½êµ¬ ì¤„ì„œëŠ” ì‚¬ëŒ
 queue <int> repairLine;
 
 
@@ -50,7 +50,7 @@ int main()
 
 		int timer = 0, counter = 0;
 		while (counter < k) {
-			// 1. Á¢¼öÁÙ ¼¼¿ì±â
+			// 1. ì ‘ìˆ˜ì¤„ ì„¸ìš°ê¸°
 			if (timer <= 1000) {
 				while (!tk[timer].empty()) {
 					int id = -tk[timer].front();
@@ -58,7 +58,7 @@ int main()
 					receiveLine.push(id);
 				}
 			}
-			// 2. ³¡³­ Ã¢±¸(a)
+			// 2. ëë‚œ ì°½êµ¬(a)
 			for (int i = 0; i < n; i++) {
 				if (aTime[i] != 0) {
 					aTime[i]--;
@@ -73,7 +73,7 @@ int main()
 				}
 			}
 
-			// ÁÙ ºñ¿ì±â (a)
+			// ì¤„ ë¹„ìš°ê¸° (a)
 			for (int i = 0; i < n; i++) {
 				if (aTime[i] == 0 && !receiveLine.empty()) {
 					int id = -receiveLine.top();

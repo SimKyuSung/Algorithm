@@ -23,7 +23,7 @@ int main()
 	int T;
 	cin >> T;
 	while (T > 0) {
-		// ÀÔ·Â ½ÃÄý½º
+		// ìž…ë ¥ ì‹œí€¸ìŠ¤
 		T--;
 		cin >> M >> N >> K;
 		memset(field, 0, sizeof(field));
@@ -34,7 +34,7 @@ int main()
 			field[Y][X] = 1;
 		}
 
-		// ¹ú·¹ ÀüÁø!
+		// ë²Œë ˆ ì „ì§„!
 		counter = 0;
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
@@ -56,7 +56,7 @@ int main()
 
 void bugMove(int x, int y) {
 	for (int i = 0; i < 4; i++) {
-		// ¾Æ¿ô¿Àºê ¹è¿­ °Ë»ç && Ä³½Ã °Ë»ç.
+		// ì•„ì›ƒì˜¤ë¸Œ ë°°ì—´ ê²€ì‚¬ && ìºì‹œ ê²€ì‚¬.
 		int X = x + moveX[i];
 		int Y = y + moveY[i];
 		if (range_error1(X, Y)) {

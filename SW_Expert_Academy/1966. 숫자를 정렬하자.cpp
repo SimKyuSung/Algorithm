@@ -1,4 +1,4 @@
-/// 1966. ╪Щюз╦╕ а╓╥дгоюз
+/// 1966. Л┬╚Л·░К╔╪ Л═∙К═╛М∙≤Л·░
 
 #include <iostream>
 #include <algorithm>

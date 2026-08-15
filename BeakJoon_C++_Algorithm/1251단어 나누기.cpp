@@ -1,4 +1,4 @@
-/// 1251´Ü¾î ³ª´©±â
+/// 1251ë‹¨ì–´ ë‚˜ëˆ„ê¸°
 
 #include <iostream>
 #include <string>
@@ -13,14 +13,14 @@ int main()
 	cin >> word;
 	int n = word.length();
 	for (int i = 1; i < n - 1; i++) {
-		// 1. ÀÏ´Ü µÚÁý°í
+		// 1. ì¼ë‹¨ ë’¤ì§‘ê³ 
 		reverse(word.begin(), word.begin() + i);
 		for (int j = i + 1; j < n; j++) {
 			reverse(word.begin() + i, word.begin() + j);
 			reverse(word.begin() + j, word.end());
-			// 2. ºñ±³ÇÏ°í
+			// 2. ë¹„êµí•˜ê³ 
 			if (word.compare(ans) < 0)	ans = word;
-			// 3. ¿ø»óº¹±Í
+			// 3. ì›ìƒë³µê·€
 			reverse(word.begin() + i, word.begin() + j);
 			reverse(word.begin() + j, word.end());
 

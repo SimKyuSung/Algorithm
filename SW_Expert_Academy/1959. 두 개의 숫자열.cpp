@@ -1,4 +1,4 @@
-/// 1959. µÎ °³ÀÇ ¼ıÀÚ¿­
+/// 1959. ë‘ ê°œì˜ ìˆ«ìì—´
 
 #include <iostream>
 #include <algorithm>

@@ -1,4 +1,4 @@
-/// 9658µ¹ °ÔÀÓ4
+/// 9658ëŒ ê²Œì„4
 
 #include <iostream>
 
@@ -17,7 +17,7 @@ int main()
 /*
 
 1, 3, 4
-¸¶Áö¸· 1 °³¸¦ ¸ÔÀ¸¸é ¸ÁÇÔ 
+ë§ˆì§€ë§‰ 1 ê°œë¥¼ ë¨¹ìœ¼ë©´ ë§í•¨ 
 
 
 cy	sk	cy	sk	sk	sk	sk	cy	sk	cy	sk	sk	sk	sk	cy	sk	cy

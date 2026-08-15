@@ -1,4 +1,4 @@
-/// 3190¹ì
+/// 3190ë±€
 
 #include <iostream>
 #include <vector>
@@ -9,7 +9,7 @@ int m[102][102];
 int se[100];
 char d[100];
 
-		//	  µ¿ ³² ¼­ ºÏ
+		//	  ë™ ë‚¨ ì„œ ë¶
 int dx[4] = { 1, 0, -1, 0 };
 int dy[4] = { 0, 1, 0, -1 };
 
@@ -18,18 +18,18 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(0);
 
-	// ±×³à´Â ¹è¿¥¹è¿¥¹è¿¥°°Àº ¿©ÀÚ!
+	// ê·¸ë…€ëŠ” ë°°ì— ë°°ì— ë°°ì— ê°™ì€ ì—¬ìž!
 	int n, k, l;
 	cin >> n >> k;
 	
-	// »ç°ú
+	// ì‚¬ê³¼
 	while (k--) {
 		int r, c;
 		cin >> r >> c;
 		m[r][c] = 2;
 	}
 
-	// º®
+	// ë²½
 	for (int i = 0; i <= n + 1; i++) {
 		m[0][i] = 3;
 		m[n + 1][i] = 3;
@@ -47,35 +47,35 @@ int main()
 	int cmdCounter = 0;
 	int dir = 0;
 	while (1) {
-		// Ãâ·Â
+		// ì¶œë ¥
 		//cout << seconds << endl;
 		//for (int i = 0; i <= n + 1; i++) {
 		//	for (int j = 0; j <= n + 1; j++) {
 		//		if (m[i][j] == 0) cout << "  ";
-		//		else if (m[i][j] == 1) cout << "¡à";
-		//		else if (m[i][j] == 2) cout << "¡Û";
-		//		else if (m[i][j] == 3) cout << "¡á";
+		//		else if (m[i][j] == 1) cout << "â–¡";
+		//		else if (m[i][j] == 2) cout << "â—‹";
+		//		else if (m[i][j] == 3) cout << "â– ";
 		//	}
 		//	cout << endl;
 		//}
-		// ¹æÇâ ¼³Á¤
+		// ë°©í–¥ ì„¤ì •
 		if (se[cmdCounter] == seconds) {
 			if (d[cmdCounter] == 'D') dir = (dir + 1) % 4;
 			else					  dir = (dir + 3) % 4;
 			cmdCounter++;
 		}
-		// ÀÌµ¿
+		// ì´ë™
 		int x = s[0].second + dx[dir];
 		int y = s[0].first + dy[dir];
 		
-		// Á×¾ú´ÂÁö ÆÇº°
+		// ì£½ì—ˆëŠ”ì§€ íŒë³„
 		if (m[y][x] == 1 || m[y][x] == 3)
 			break;
-		// »ç°ú ¸ÔÀ½
+		// ì‚¬ê³¼ ë¨¹ìŒ
 		else if (m[y][x] == 2)
 			s.push_back(s.back());
 
-		// ¹ì Ç¥½Ã
+		// ë±€ í‘œì‹œ
 		m[s.back().first][s.back().second] = 0;
 		for (int i = s.size() - 1; i > 0; i--)
 			s[i] = s[i - 1];

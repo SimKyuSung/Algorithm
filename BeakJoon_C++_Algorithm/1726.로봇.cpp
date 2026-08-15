@@ -1,4 +1,4 @@
-/// 1726.·Îº¿
+/// 1726.ë¡œë´‡
 
 #include <iostream>
 #include <queue>
@@ -15,11 +15,11 @@ struct State {
 	int y, x, d, counter;
 };
 
-// µ¿ ºÏ ¼­ ³²
+// ë™ ë¶ ì„œ ë‚¨
 /*
-	ºÏ1
-¼­2		µ¿0
-	³²3
+	ë¶1
+ì„œ2		ë™0
+	ë‚¨3
 
 */
 int dy[] = { 0, -1, 0, 1 };
@@ -61,7 +61,7 @@ int main()
 		x = now.x;
 		d = now.d;
 		int counter = now.counter + 1;
-		// * ¹®Á¦ ÁÖÀÇ ÇÒÁ¡: ½ÃÀÛÁ¡°ú µµÂøÁ¡ÀÌ °°À» ¼ö ÀÖÀ½
+		// * ë¬¸ì œ ì£¼ì˜ í• ì : ì‹œì‘ì ê³¼ ë„ì°©ì ì´ ê°™ì„ ìˆ˜ ìˆìŒ
 		if (target.y == y && target.x == x && target.d == d) {
 			cout << now.counter << endl;
 			return 0;
@@ -69,7 +69,7 @@ int main()
 
 		//cout << y << ' ' << x << ' ' << d << ' ' << counter - 1 << endl;
 
-		// ÀüÁø ÇÏ°Å³ª 
+		// ì „ì§„ í•˜ê±°ë‚˜ 
 		for (int i = 1; i < 4; i++) {
 			int ny = y + dy[d] * i;
 			int nx = x + dx[d] * i;
@@ -86,7 +86,7 @@ int main()
 				break;
 		}
 
-		// È¸Àü ÇÏ°Å³ª
+		// íšŒì „ í•˜ê±°ë‚˜
 		// ccw
 		d = (d + 1) % 4;
 		if (!check[y][x][d]) {

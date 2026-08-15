@@ -1,4 +1,4 @@
-/// 1767. [SW Test »ùÇÃ¹®Á¦] ÇÁ·Î¼¼¼­ ¿¬°áÇÏ±â
+/// 1767. [SW Test ìƒ˜í”Œë¬¸ì œ] í”„ë¡œì„¸ì„œ ì—°ê²°í•˜ê¸°
 
 #include <iostream>
 #include <vector>
@@ -7,7 +7,7 @@
 using namespace std;
 
 bool cell[12][12];
-// 0 °¡·Î, 1 ¼¼·Î
+// 0 ê°€ë¡œ, 1 ì„¸ë¡œ
 int dp[12][12][2];
 
 int main()

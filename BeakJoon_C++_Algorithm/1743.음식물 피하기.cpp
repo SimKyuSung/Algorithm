@@ -1,4 +1,4 @@
-/// 1743.À½½Ä¹° ÇÇÇÏ±â
+/// 1743.ìŒì‹ë¬¼ í”¼í•˜ê¸°
 
 #include <iostream>
 #include <algorithm>

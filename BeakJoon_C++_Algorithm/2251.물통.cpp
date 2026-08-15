@@ -1,4 +1,4 @@
-/// 2251.¹°Åë
+/// 2251.ë¬¼í†µ
 
 #include <iostream>
 #include <queue>
@@ -55,7 +55,7 @@ int main()
 
 }
 
-// b -> a ·Î ´ã±â
+// b -> a ë¡œ ë‹´ê¸°
 void qPush(State next, int a, int b) {
 	next.abc[a] += next.abc[b];
 	next.abc[b] = 0;
@@ -70,5 +70,5 @@ void qPush(State next, int a, int b) {
 }
 
 /*
-»ó´ë¸¦ °¡µæ Ã¤¿ì°Å³ª, ³»°¡ 0ÀÌ µÇ¸é ³¡
+ìƒëŒ€ë¥¼ ê°€ë“ ì±„ìš°ê±°ë‚˜, ë‚´ê°€ 0ì´ ë˜ë©´ ë
 */

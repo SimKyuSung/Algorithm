@@ -1,4 +1,4 @@
-/// 1092¹è
+/// 1092ë°°
 
 #include <iostream>
 #include <algorithm>
@@ -35,7 +35,7 @@ int main()
 		}
 	}
 	
-	// ÃÖÀûÈ­ ½ÃÇà
+	// ìµœì í™” ì‹œí–‰
 	int x = n;
 	int maxSecond = max(m / x + bool(m - (m / x) * x), boxMove.back());
 	for (int i = 0; i < n - 1; i++, x--) {

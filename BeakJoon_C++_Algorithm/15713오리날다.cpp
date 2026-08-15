@@ -1,4 +1,4 @@
-/// 15713¿À¸®³¯´Ù
+/// 15713ì˜¤ë¦¬ë‚ ë‹¤
 
 #include <iostream>
 #include <algorithm>
@@ -13,9 +13,9 @@ using namespace std;
 typedef pair<long long, int> LI;
 const long long INF = 1e15;
 
-// ³ôÀÌ, Á¡ÇÁ³ôÀÌ
+// ë†’ì´, ì í”„ë†’ì´
 vector <LI> yh;
-// -(ÇöÀç ³ôÀÌ + ¿òÁ÷ÀÎ °Å¸®), -ÇöÀç ³ôÀÌ
+// -(í˜„ì¬ ë†’ì´ + ì›€ì§ì¸ ê±°ë¦¬), -í˜„ì¬ ë†’ì´
 priority_queue <LI> pq;
 
 int main()
@@ -34,13 +34,13 @@ int main()
 	pq.push({ 0,0 });
 	long long ans = INF;
 	while (i < n) {
-		// ³ôÀÌ°¡ ¸ğÀÚ¶õ ¿À¸®µé Á×ÀÌ±â
+		// ë†’ì´ê°€ ëª¨ìë€ ì˜¤ë¦¬ë“¤ ì£½ì´ê¸°
 		while (!pq.empty() && -pq.top().second < yh[i].first)
 			pq.pop();
 		if (pq.empty())
 			break;
 
-		// °¡Àå È¿À²ÀûÀÎ ¿À¸® ¼±ÅÃ
+		// ê°€ì¥ íš¨ìœ¨ì ì¸ ì˜¤ë¦¬ ì„ íƒ
 		long long distance = pq.top().first + yh[i].first;
 		int level = yh[i].first + yh[i].second;
 		

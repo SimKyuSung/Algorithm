@@ -1,4 +1,4 @@
-/// 16236.¾Æ±â »ó¾î
+/// 16236.ì•„ê¸° ìƒì–´
 
 #include <iostream>
 #include <queue>
@@ -58,7 +58,7 @@ int main()
 		check[q.front().y][q.front().x] = 1;
 		fishList.clear();
 
-		// 1. ¹°°í±â Ã£±â
+		// 1. ë¬¼ê³ ê¸° ì°¾ê¸°
 		while (!q.empty()) {
 			Point now = q.front();
 			q.pop();
@@ -77,11 +77,11 @@ int main()
 			}
 		}
 
-		// 2. ¸ÔÀ»°Å ¾øÀ¸¸é ¿©Çà ³¡
+		// 2. ë¨¹ì„ê±° ì—†ìœ¼ë©´ ì—¬í–‰ ë
 		if (fishList.empty())
 			break;
 
-		// 3. °¡Àå °¡±î¿î ¹°°í±â ¸Ô±â
+		// 3. ê°€ì¥ ê°€ê¹Œìš´ ë¬¼ê³ ê¸° ë¨¹ê¸°
 		sort(fishList.begin(), fishList.end(), cmp);
 		y = fishList[0].y;
 		x = fishList[0].x;
@@ -89,7 +89,7 @@ int main()
 		water[y][x] = 0;
 		ans += fishList[0].t;
 
-		// 4. ¹°°í±â ¼ºÀå
+		// 4. ë¬¼ê³ ê¸° ì„±ì¥
 		counter--;
 		if (counter == 0) {
 			gSize++;

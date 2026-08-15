@@ -17,7 +17,7 @@ vector <int> counter(8001, 0);
 
 int main()
 {
-	// ÀÔ·Â
+	// ì…ë ¥
 	ios::sync_with_stdio(false);
 	int n; cin >> n;
 	int input = 4000;
@@ -26,33 +26,33 @@ int main()
 		cin >> input;
 		//input = -4000;
 
-		// »ê¼ú Æò±Õ
+		// ì‚°ìˆ  í‰ê· 
 		arithmetci += input;
-		// Áß¾Ó°ª, ¹üÀ§
+		// ì¤‘ì•™ê°’, ë²”ìœ„
 		arr.push_back(input);
-		// ÃÖºó°ª
+		// ìµœë¹ˆê°’
 		counter[input + 4000]++;
 	}
 	n = arr.size();
 
 
-	// ¾Ë°í¸®Áò
-	// 0. Á¤·Ä
+	// ì•Œê³ ë¦¬ì¦˜
+	// 0. ì •ë ¬
 	sort(arr.begin(), arr.end());
 
-	// 1. »ê¼ú Æò±Õ
+	// 1. ì‚°ìˆ  í‰ê· 
 	arithmetci = round((double)arithmetci / (double)n);
 
-	// 2. Áß ¾Ó °ª
+	// 2. ì¤‘ ì•™ ê°’
 	median = arr[n / 2];
 
-	// 3. ÃÖºó°ª
+	// 3. ìµœë¹ˆê°’
 	int modeCounter = 0;
 	bool mulitplex = false;
 	for (int i = 0; i < 8001; i++) {
-		// °¡Àå ¸¹Àº °ªÀ» ÃßÀû
+		// ê°€ì¥ ë§ì€ ê°’ì„ ì¶”ì 
 		if (modeCounter <= counter[i]) {
-			// °¡Àå ¸¹Àº °ªÀÌ ¿©·¯°³ ÀÏ °æ¿ì ÃÖºó°ªµéÁß µÎ¹øÂ°·Î ÀÛÀº °ª Ãâ·Â
+			// ê°€ì¥ ë§ì€ ê°’ì´ ì—¬ëŸ¬ê°œ ì¼ ê²½ìš° ìµœë¹ˆê°’ë“¤ì¤‘ ë‘ë²ˆì§¸ë¡œ ì‘ì€ ê°’ ì¶œë ¥
 			if ((modeCounter == counter[i]) && !mulitplex) {
 				mode = i - 4000;
 				mulitplex = true;
@@ -65,11 +65,11 @@ int main()
 		}
 	}
 
-	// 4. ¹üÀ§
+	// 4. ë²”ìœ„
 	range = arr.back() - arr.front();
 
 
-	// Ãâ·Â
+	// ì¶œë ¥
 	cout << arithmetci << '\n';
 	cout << median << '\n';
 	cout << mode << '\n';

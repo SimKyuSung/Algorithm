@@ -25,14 +25,14 @@ int main()
 		graph[n2][n1] = 1;
 	}
 
-	// DFS »Ð!
+	// DFS ë¿…!
 	function1(V);
 
-	// BFS !¤Ë¤·
+	// BFS !ã…›ã…‡
 	cout << endl << V << " ";
 	cash2[V] = true;
 	function2(V);
-	// Å¥ ºñ¿ì¸é¼­ Å¥Æã¼Ç ½ÇÇà, 
+	// í ë¹„ìš°ë©´ì„œ ííŽ‘ì…˜ ì‹¤í–‰, 
 	for (int i = 0; i < N; i++) {
 		if (!node.empty()) {
 			printf("%d ", node.front());
@@ -45,12 +45,12 @@ int main()
 	}
 	
 	cout << endl;
-	// 5ÃÊ´Ï±ñ »ç¶ûÀÌ´Ù.
+	// 5ì´ˆë‹ˆê¹ ì‚¬ëž‘ì´ë‹¤.
 	return 0;
 }
 
 void function1(int n) {
-	// me¸¦ Ãâ·Â ÇÏ°í »ç¿ëÇÔ Ç¥½Ã
+	// meë¥¼ ì¶œë ¥ í•˜ê³  ì‚¬ìš©í•¨ í‘œì‹œ
 	printf("%d ", n);
 	cash1[n] = true;
 	for (int i = 1; i <= N; i++)
@@ -60,7 +60,7 @@ void function1(int n) {
 
 void function2(int n) {
 	for (int i = 1; i <= N; i++) {
-		// Å¥¿¡ ³Ö¾î ºÎ·¯~
+		// íì— ë„£ì–´ ë¶€ëŸ¬~
 		if (graph[n][i] && !cash2[i]) {
 			node.push(i);
 			cash2[i] = true;

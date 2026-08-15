@@ -7,12 +7,12 @@ int main()
 	int N;
 	cin >> N;
 
-	// N ְּ 1ְֿ¶§
+	// N ל´ 1ל¼כ•
 	for (int i = 1; i < N; i++)
 		cout << " ";
 	cout << "*\n";
 
-	// N ְּ 2ְּ»ף ÷־ֵֽ
+	// N ל´ 2ל´לƒ כ¶€ם„°
 	// 10990
 	/*for (int i = 2; i <= N; i++) {
 		for (int j = i; j < N; j++)

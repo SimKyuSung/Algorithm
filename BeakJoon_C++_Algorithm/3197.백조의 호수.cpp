@@ -1,4 +1,4 @@
-/// 3197.น้มถภว ศฃผ๖
+/// 3197.๋ฐฑ์กฐ์ ํธ์
 
 #include <iostream>
 #include <queue>

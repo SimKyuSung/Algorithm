@@ -1,4 +1,4 @@
-/// 15654.N°ú M (5)
+/// 15654.Nê³¼ M (5)
 
 #include <iostream>
 #include <algorithm>

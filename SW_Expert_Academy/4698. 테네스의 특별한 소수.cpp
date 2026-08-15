@@ -1,4 +1,4 @@
-/// 4698. �׳׽��� Ư���� �Ҽ�
+/// 4698. 테네스의 특별한 소수
 
 #include <iostream>
 #include <vector>

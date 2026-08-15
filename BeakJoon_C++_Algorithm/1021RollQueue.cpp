@@ -30,7 +30,7 @@ int main()
 			if (*iter == order.front())
 				break;
 
-		// Àı¹İ º¸´Ù µÚ¿¡ ÀÖÀ¸¸é 3¿¬»ê
+		// ì ˆë°˜ ë³´ë‹¤ ë’¤ì— ìˆìœ¼ë©´ 3ì—°ì‚°
 		if (counter > dq.size() / 2) {
 			while (dq.front() != order.front()) {
 				ans++;
@@ -40,7 +40,7 @@ int main()
 			dq.pop_front();
 			order.pop();
 		}
-		else {	// Àı¹İ º¸´Ù ¾Õ¿¡ ÀÖÀ¸¸é 2¿¬»ê
+		else {	// ì ˆë°˜ ë³´ë‹¤ ì•ì— ìˆìœ¼ë©´ 2ì—°ì‚°
 			while (dq.front() != order.front()) {
 				ans++;
 				dq.push_back(dq.front());

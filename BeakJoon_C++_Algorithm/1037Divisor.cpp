@@ -6,7 +6,7 @@ int main()
 {
 	unsigned long long n, divisor, minimum = 1000004, maximum = 1;
 	cin >> n;
-	// °¡Àå ÀÛÀº ¾à¼ö¿Í °¡Àå Å« ¾à¼ö¸¦ °öÇÏ¸é ¿ø·¡ÀÇ ¼ö°¡ ³ª¿Â´Ù.
+	// ê°€ìž¥ ìž‘ì€ ì•½ìˆ˜ì™€ ê°€ìž¥ í° ì•½ìˆ˜ë¥¼ ê³±í•˜ë©´ ì›ëž˜ì˜ ìˆ˜ê°€ ë‚˜ì˜¨ë‹¤.
 	while (n--) {
 		cin >> divisor;
 		minimum = min(minimum, divisor);

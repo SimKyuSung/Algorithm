@@ -51,7 +51,7 @@ int main()
 	}
 }
 
-// d ¹æÇâÀ¸·Î ¿òÁ÷ÀÓ
+// d ë°©í–¥ìœ¼ë¡œ ì›€ì§ì„
 void move(int d,const vector < vector <int> > tile, vector < vector <int> > &nextTile) {
 	int xs = dsx[d] * (n - 1);
 	int ys = dsy[d] * (n - 1);

@@ -1,4 +1,4 @@
-/// 7576Åä¸¶Åä
+/// 7576í† ë§ˆí† 
 /// 2018-01-31 by Sim_kyuSung
 
 #include <iostream>

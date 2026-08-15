@@ -1,4 +1,4 @@
-/// 1036_36Áø¼ö
+/// 1036_36ì§„ìˆ˜
 
 #include <iostream>
 #include <string>
@@ -37,7 +37,7 @@ int main()
 		}
 	}
 
-	/* 2. 0 ~ 35¸¦ 35·Î ¹Ù²ÛµÚ ÇÕ°è */
+	/* 2. 0 ~ 35ë¥¼ 35ë¡œ ë°”ê¾¼ë’¤ í•©ê³„ */
 	for (int b = 0; b < 35; b++) {
 		int sum, carry = 0;
 		for (int j = 0; j < mSize; j++) {
@@ -59,7 +59,7 @@ int main()
 		}
 	}
 
-	/* 3. ÇÕ°è ¼ÒÆÃ*/
+	/* 3. í•©ê³„ ì†ŒíŒ…*/
 	for (int i = 0; i < 34; i++) {
 		int tmp = i;
 		for (int j = i + 1; j < 35; j++) {
@@ -70,7 +70,7 @@ int main()
 		swap(base36sum[i], base36sum[tmp]);
 	}
 
-	/* 4. »óÀ§ k°³ ¹Ù²Ù±â */
+	/* 4. ìƒìœ„ kê°œ ë°”ê¾¸ê¸° */
 	cin >> k;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < base36[i].size(); j++)
@@ -79,7 +79,7 @@ int main()
 					base36[i][j] = 35;
 	}
 
-	/* 5. ¹Ù²ÛµÚ ÇÕ°è ±¸ÇÏ±â */
+	/* 5. ë°”ê¾¼ë’¤ í•©ê³„ êµ¬í•˜ê¸° */
 	vector <int> ans;
 	int sum, carry = 0;
 	for (int j = 0; j < mSize; j++) {
@@ -105,7 +105,7 @@ int main()
 }
 
 bool cmp(vector <int> a, vector <int> b) {
-	// b°¡ ´õ Å©¸é return true;
+	// bê°€ ë” í¬ë©´ return true;
 	if (a.size() != b.size())
 		return a.size() < b.size();
 

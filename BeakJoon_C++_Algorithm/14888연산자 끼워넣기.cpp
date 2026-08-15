@@ -1,4 +1,4 @@
-/// 14888¿¬»êÀÚ ³¢¿ö³Ö±â
+/// 14888ì—°ì‚°ì ë¼ì›Œë„£ê¸°
 
 #include <iostream>
 #include <vector>
@@ -47,7 +47,7 @@ pp dfs(int n) {
 
 	for (int i = 0; i < 4; i++) {
 		op[i]--;
-		// °è»ê
+		// ê³„ì‚°
 		if (op[i] > -1) {
 			pp tmp = dfs(n - 1);
 			int a2 = oper(tmp.fi, num[n], i);

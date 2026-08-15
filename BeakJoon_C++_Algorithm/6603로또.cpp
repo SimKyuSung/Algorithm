@@ -1,4 +1,4 @@
-/// 6603·Î¶Ç
+/// 6603ë¡œë˜
 
 #include <iostream>
 #include <vector>
@@ -24,7 +24,7 @@ int main()
 }
 
 void solve(int n, int counter) {
-	// Á¾·á Á¶°Ç °Ë»ç
+	// ì¢…ë£Œ ì¡°ê±´ ê²€ì‚¬
 	if (n == l) {
 		for (int i = 0; i < l; i++)
 			cout << ans[i] << " ";

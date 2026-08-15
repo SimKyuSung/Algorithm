@@ -1,4 +1,4 @@
-/// 1194´ŞÀÌ Â÷¿À¸¥´Ù, °¡ÀÚ.
+/// 1194ë‹¬ì´ ì°¨ì˜¤ë¥¸ë‹¤, ê°€ì.
 
 #include <iostream>
 #include <vector>
@@ -69,7 +69,7 @@ int bfs() {
 				return cnt;
 			}
 
-			// ´Ù¸¥Å°¸¦ °¡Áö°í ÀÖÀ¸¸é Çª½¬
+			// ë‹¤ë¥¸í‚¤ë¥¼ ê°€ì§€ê³  ìˆìœ¼ë©´ í‘¸ì‰¬
 			if (!ch[y][x][nextKey]) {
 				q.push({ x, y, nextKey, cnt });
 				ch[y][x][nextKey] = 1;

@@ -1,4 +1,4 @@
-﻿/// 1422.숫자의 신
+/// 1422.숫자의 신
 
 #include <iostream>
 #include <vector>

@@ -1,4 +1,4 @@
-/// 14716Çö¼ö¸·
+/// 14716í˜„ìˆ˜ë§‰
 
 #include <iostream>
 #include <vector>

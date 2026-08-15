@@ -1,4 +1,4 @@
-/// 2482»ö»óÈ¯
+/// 2482ìƒ‰ìƒí™˜
 
 #include <iostream>
 #include <memory.h>
@@ -19,12 +19,12 @@ int main()
 	int n, k;
 	cin >> n >> k;
 
-	// n - 1¹ø ¼±ÅÃ¾ÈÇÔ
+	// n - 1ë²ˆ ì„ íƒì•ˆí•¨
 	dpInit(n, k);
 	color[0][1][1] = 1;
 	findCase(n, k);
 	int ans = color[n - 1][k][0];
-	// n - 1¹ø ¼±ÅÃÇÔ
+	// n - 1ë²ˆ ì„ íƒí•¨
 	dpInit(n, k);
 	findCase(n, k);
 	cout << (ans + color[n - 1][k][1]) % MOD << '\n';

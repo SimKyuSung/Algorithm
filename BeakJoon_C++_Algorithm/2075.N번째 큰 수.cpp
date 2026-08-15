@@ -1,4 +1,4 @@
-/// 2075.N��° ū ��
+/// 2075.N번째 큰 수
 
 #include <iostream>
 #include <queue>
@@ -87,7 +87,7 @@ int main()
 
 /*
 
-pop() ��ġ�� ���� Ʋ�� TC
+pop() 위치에 따른 틀린 TC
 3
 7 4 1
 8 5 2

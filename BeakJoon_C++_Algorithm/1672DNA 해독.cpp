@@ -1,4 +1,4 @@
-/// 1672DNA ÇØµ¶
+/// 1672DNA í•´ë…
 
 #include <iostream>
 #include <string>

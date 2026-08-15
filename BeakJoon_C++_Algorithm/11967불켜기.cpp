@@ -1,4 +1,4 @@
-/// 11967ºÒÄÑ±â
+/// 11967ë¶ˆì¼œê¸°
 
 #include <iostream>
 #include <vector>
@@ -51,26 +51,26 @@ int main()
 }
 
 void dfs1(int y, int x) {
-	// 1. ºÒÄÑ±â!
+	// 1. ë¶ˆì¼œê¸°!
 	for (int i = 0; i < edge[y][x].size(); i++) {
 		coordinate next = edge[y][x][i];
 		room[next.y][next.x] = 1;
 	}
 
-	// 2. »õ·Î ¿¬°áµÈ ÁöÁ¡ Ã£±â!
+	// 2. ìƒˆë¡œ ì—°ê²°ëœ ì§€ì  ì°¾ê¸°!
 	int start = access.size(), end;
 	for (int i = 0; i < access.size(); i++) {
 		for (int d = 0; d < 4; d++) {
 			int xx = access[i].x + dx[d];
 			int yy = access[i].y + dy[d];
-			// Á¢±Ù ÇÑÀû ¾ø°í, ºÒÀÌ ÄÑÁ® ÀÖ´Ù¸é, »õ·Î Ãß°¡ÇÏ´Â ÇÔ¼ö
+			// ì ‘ê·¼ í•œì  ì—†ê³ , ë¶ˆì´ ì¼œì ¸ ìžˆë‹¤ë©´, ìƒˆë¡œ ì¶”ê°€í•˜ëŠ” í•¨ìˆ˜
 			if (0 <= xx && xx < n && 0 <= yy && yy < n)
 				if (!ch1[yy][xx] && room[yy][xx])
 					dfs2(yy, xx);
 		}
 	}
 
-	// 3. »õ·Î ¿¬°áµÈ ÁöÁ¡ ´ë»óÀ¸·Î dfs1 ½ÇÇà
+	// 3. ìƒˆë¡œ ì—°ê²°ëœ ì§€ì  ëŒ€ìƒìœ¼ë¡œ dfs1 ì‹¤í–‰
 	end = access.size();
 	ch2[y][x] = 1;
 	for (int i = start; i < end; i++) {

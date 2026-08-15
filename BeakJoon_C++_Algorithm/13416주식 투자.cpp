@@ -1,4 +1,4 @@
-/// 13416ÁÖ½Ä ÅõÀÚ
+/// 13416ì£¼ì‹ íˆ¬ì
 
 #include <iostream>
 #include <algorithm>

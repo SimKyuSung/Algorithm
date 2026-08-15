@@ -1,4 +1,4 @@
-/// 10935.BASE64 юндз╣Ы
+/// 10935.BASE64 Л²╦Л╫■К■╘
 
 #include <iostream>
 #include <string>

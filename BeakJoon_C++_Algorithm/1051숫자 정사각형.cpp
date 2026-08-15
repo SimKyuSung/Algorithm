@@ -1,4 +1,4 @@
-/// 1051¼ıÀÚ Á¤»ç°¢Çü
+/// 1051ìˆ«ì ì •ì‚¬ê°í˜•
 
 #include <cstdio>
 #include <iostream>
@@ -33,7 +33,7 @@ int main()
 
 int solve(int x, int y, string line[], int ret) {
 	char s = line[y][x];
-	// 1¾¿ ÁÙ¿©°¡¸é¼­ °Ë»ö
+	// 1ì”© ì¤„ì—¬ê°€ë©´ì„œ ê²€ìƒ‰
 	while (ret > 0) {
 		if (s == line[y][x + ret] && s == line[y + ret][x] && s == line[y + ret][x + ret])
 			return ret + 1;

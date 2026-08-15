@@ -1,4 +1,4 @@
-/// 10803.Á¤»ç°¢Çü ¸¸µé±â
+/// 10803.ì •ì‚¬ê°í˜• ë§Œë“¤ê¸°
 
 #include <iostream>
 #include <algorithm>
@@ -60,11 +60,11 @@ int function(int n, int m) {
 	if (n % m == 0)
 		return dp[n][m] = n / m;
 	ret = 100 * 10000;
-	//// °¡·Î·Î ÀÚ¸£±â!
+	//// ê°€ë¡œë¡œ ìë¥´ê¸°!
 	//for (int i = 1; i <= n / 2; i++) {
 	//	ret = min(ret, function(max(i, m), min(i, m)) + function(max(n - i, m), min(n - i, m)));
 	//}
-	//// ¼¼·Î·Î ÀÚ¸£±â!
+	//// ì„¸ë¡œë¡œ ìë¥´ê¸°!
 	//for (int j = 1; j <= m / 2; j++) {
 	//	ret = min(ret, function(max(n, j), min(n, j)) + function(max(n, m - j), min(n, m - j)));
 	//}

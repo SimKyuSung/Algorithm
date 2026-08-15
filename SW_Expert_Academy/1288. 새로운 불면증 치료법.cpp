@@ -1,4 +1,4 @@
-/// 1288. ���ο� �Ҹ��� ġ���
+/// 1288. 새로운 불면증 치료법
 
 #include <iostream>
 #include <memory.h>

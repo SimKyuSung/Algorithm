@@ -1,4 +1,4 @@
-/// 16432.¶±Àå¼ö¿Í È£¶ûÀÌ
+/// 16432.ë–¡ì¥ìˆ˜ì™€ í˜¸ë‘ì´
 
 #include <iostream>
 #include <queue>
@@ -39,7 +39,7 @@ int main()
 		int tt = q.front().tt;
 		q.pop();
 
-		// ¾Õ ³¯ 
+		// ì• ë‚  
 		if (index > 0) {
 			if (tteok[index - 1][tt]) {
 				tteok[index - 1][tt] = 0;
@@ -57,7 +57,7 @@ int main()
 			}
 		}
 
-		// µŞ ³¯
+		// ë’· ë‚ 
 		if (index < 1000) {
 			if (tteok[index + 1][tt]) {
 				tteok[index + 1][tt] = 0;

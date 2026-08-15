@@ -1,4 +1,4 @@
-/// 1926. °£´ÜÇÑ 369°ÔÀÓ
+/// 1926. ê°„ë‹¨í•œ 369ê²Œìž„
 
 #include <iostream>
 
@@ -9,7 +9,7 @@ int main()
 	int n;
 	cin >> n;
 	for (int i = 1; i <= n; i++) {
-		// ¼ýÀÚ ºÐÇØ
+		// ìˆ«ìž ë¶„í•´
 		int tmp = i;
 		int c = 0;
 		while (tmp) {

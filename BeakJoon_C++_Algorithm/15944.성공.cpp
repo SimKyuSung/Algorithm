@@ -1,4 +1,4 @@
-/// 15944.¼º°ø
+/// 15944.ì„±ê³µ
 
 #include <iostream>
 #include <queue>
@@ -51,7 +51,7 @@ int main()
 	boomCnt[0][0] = 1;
 
 	while (1) {
-		// ¶Õ¸°±æ Ã£±â
+		// ëš«ë¦°ê¸¸ ì°¾ê¸°
 		while (!q.empty()) {
 			int y = q.front().y;
 			int x = q.front().x;
@@ -61,7 +61,7 @@ int main()
 			for (int dir = 0; dir < 4; dir++) {
 				int ny = y + dy[dir];
 				int nx = x + dx[dir];
-				// ¹üÀ§ ¾È¿¡ ÀÖ°í,								¹æ¹®ÇÑÀû ¾ø°í, ±æÀÌ ¶Õ¸°°÷
+				// ë²”ìœ„ ì•ˆì— ìžˆê³ ,								ë°©ë¬¸í•œì  ì—†ê³ , ê¸¸ì´ ëš«ë¦°ê³³
 				if (0 <= ny && ny < n && 0 <= nx && nx < m && boomCnt[ny][nx] == 0 && path[ny][nx]) {
 					if (ny == n - 1 && nx == m - 1) {
 						cout << boomCnt[y][x] - 1 << endl;
@@ -73,7 +73,7 @@ int main()
 			}
 		}
 
-		// Á¢±Ù °¡´É ¿µ¿ª ÁÖº¯ ÆøÅº ÅÍÆ®¸®±â!
+		// ì ‘ê·¼ ê°€ëŠ¥ ì˜ì—­ ì£¼ë³€ í­íƒ„ í„°íŠ¸ë¦¬ê¸°!
 		while (!nextArea.empty()) {
 			Effect now = nextArea.front();
 			nextArea.pop();
@@ -85,7 +85,7 @@ int main()
 				int nx = x + dx[dir];
 				int ndy = abs(now.a.y - ny);
 				int ndx = abs(now.a.x - nx);
-				// ¹üÀ§¾È¿¡ ÀÖ°í,	 ¹æ¹®ÇÑÀû ¾ø°í, ¼Ò½º(a)·Î ºÎÅÍ ÆøÅº 1°³·Î °¥¼ö ÀÖ´Â °÷
+				// ë²”ìœ„ì•ˆì— ìžˆê³ ,	 ë°©ë¬¸í•œì  ì—†ê³ , ì†ŒìŠ¤(a)ë¡œ ë¶€í„° í­íƒ„ 1ê°œë¡œ ê°ˆìˆ˜ ìžˆëŠ” ê³³
 				if (0 <= ny && ny < n && 0 <= nx && nx < m && boomCnt[ny][nx] == 0 && ndy <= d && ndx <= d && !(ndy == d && ndx == d)) {
 					if (ny == n - 1 && nx == m - 1) {
 						cout << boomCnt[y][x] - 1 << endl;

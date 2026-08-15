@@ -1,4 +1,4 @@
-/// 4613. ·¯½Ã¾Æ ±¹±â °°Àº ±ê¹ß
+/// 4613. ëŸ¬ì‹œì•„ êµ­ê¸° ê°™ì€ ê¹ƒë°œ
 
 #include <iostream>
 #include <string>
@@ -39,9 +39,9 @@ int main()
 			b[i] = counter[i]['w' - 'a'] + counter[i]['r' - 'a'];
 			r[i] = counter[i]['w' - 'a'] + counter[i]['b' - 'a'];
 		}
-		// ÆÄ¶õ»ö ½ÃÀÛÁ¡
+		// íŒŒë€ìƒ‰ ì‹œì‘ì 
 		for (int i = 1; i < n - 1; i++) {
-			// »¡°­»ö ½ÃÀÛÁ¡
+			// ë¹¨ê°•ìƒ‰ ì‹œì‘ì 
 			for (int j = i + 1; j < n; j++) {
 				int tmp = 0;
 				for (int wi = 0; wi < i; wi++)

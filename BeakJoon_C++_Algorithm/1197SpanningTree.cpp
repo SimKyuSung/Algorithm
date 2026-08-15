@@ -8,21 +8,21 @@ using namespace std;
 int n, m, w;
 int n1, n2;
 
-// graph ÀÔ·Â edge[here] = pair(w, there)
+// graph ì…ë ¥ edge[here] = pair(w, there)
 vector<pair<int, int> > edge[10001];
-// visited Ç¥±â
+// visited í‘œê¸°
 vector<bool> visited(10001, false);
 
 int Prim(int);
 
 int main() {
-	// ÀÔ·Â ½ÃÄı½º
-	// node °³¼ö, edge °³¼ö
+	// ì…ë ¥ ì‹œí€¸ìŠ¤
+	// node ê°œìˆ˜, edge ê°œìˆ˜
 	cin >> n >> m;
 	for (int i = 0; i < m; i++) {
-		// edge ÀÔ·Â
+		// edge ì…ë ¥
 		cin >> n1 >> n2 >> w;
-		// vector »ğÀÔ
+		// vector ì‚½ì…
 		edge[n1].push_back({ w, n2 });
 		edge[n2].push_back({ w, n1 });
 	}
@@ -31,25 +31,25 @@ int main() {
 }
 
 int Prim(int start) {
-	// ³»¸²Â÷¼ø ¿ì¼±¼øÀ§ Å¥ »ı¼º
+	// ë‚´ë¦¼ì°¨ìˆœ ìš°ì„ ìˆœìœ„ í ìƒì„±
 	int ans = 0;
 	priority_queue<pair<int, int> > pq;
 
-	// ½ÃÀÛ ³ëµå´Â start, (-w, there)
+	// ì‹œì‘ ë…¸ë“œëŠ” start, (-w, there)
 	pq.push(make_pair(0, start));
 
 	while (!pq.empty()) {
-		// À½¼ö°ªÀ» queue¿¡ »ğÀÔÇÔÀ¸·Î, -1À» °öÇØ¼­ cost°ª Ãâ·Â
+		// ìŒìˆ˜ê°’ì„ queueì— ì‚½ì…í•¨ìœ¼ë¡œ, -1ì„ ê³±í•´ì„œ costê°’ ì¶œë ¥
 		int cost = -pq.top().first;
 		int there = pq.top().second;
 		pq.pop();
-		// ÀÌ¹Ì ¹æ¹®ÇÑ node ¶ó¸é pass
+		// ì´ë¯¸ ë°©ë¬¸í•œ node ë¼ë©´ pass
 		if (visited[there]) continue;
-		// Áö³ª°¨ Ç¥½Ã
+		// ì§€ë‚˜ê° í‘œì‹œ
 		visited[there] = true;
-		// ´©Àû°ª °è»ê
+		// ëˆ„ì ê°’ ê³„ì‚°
 		ans += cost;
-		// ½Å±Ô·Î ¿¬°áµÈ nodeÀÇ edge¸¦ push 
+		// ì‹ ê·œë¡œ ì—°ê²°ëœ nodeì˜ edgeë¥¼ push 
 		for (int i = 0; i < edge[there].size(); i++)
 			pq.push({ -edge[there][i].first, edge[there][i].second });
 	}

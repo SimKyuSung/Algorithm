@@ -1,4 +1,4 @@
-/// 14594.╣©╧Ф га╥на╖ф╝ (Small)
+/// 14594.К▐≥К╟╘ М■└К║°Л═²М┼╦ (Small)
 
 #include <iostream>
 #include <algorithm>

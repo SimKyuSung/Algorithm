@@ -1,4 +1,4 @@
-/// 2105. [¸ğÀÇ SW ¿ª·®Å×½ºÆ®] µğÀúÆ® Ä«Æä
+/// 2105. [ëª¨ì˜ SW ì—­ëŸ‰í…ŒìŠ¤íŠ¸] ë””ì €íŠ¸ ì¹´í˜
 
 #include <iostream>
 #include <algorithm>
@@ -71,7 +71,7 @@ void a(int y, int x) {
 	sum1[cafe[y][x]] = 1;
 
 	//cout << "a: ";
-	// ¿ŞÂÊ ¾Æ·¡
+	// ì™¼ìª½ ì•„ë˜
 	int ny = y, nx = x;
 	for (int i = 0; i < leftCounter; i++) {
 		ny++;
@@ -80,7 +80,7 @@ void a(int y, int x) {
 			break;
 		sum1[cafe[ny][nx]] = 1;
 
-		// ¿À¸¥ÂÊ ¾Æ·¡
+		// ì˜¤ë¥¸ìª½ ì•„ë˜
 		int nny = ny, nnx = nx;
 		bitset<100> sum2 = sum1;
 		for (int j = 0; j < rightCounter; j++) {
@@ -104,7 +104,7 @@ int b(int y, int x) {
 	int ans = 0;
 	bitset<100> sum2(0);
 	//cout << "b: ";
-	// ¿À¸¥ÂÊ ¾Æ·¡
+	// ì˜¤ë¥¸ìª½ ì•„ë˜
 	int nny = y, nnx = x;
 	for (int j = 0; j < rightCounter; j++) {
 		nny++;
@@ -112,7 +112,7 @@ int b(int y, int x) {
 		if (sum2[cafe[nny][nnx]])
 			break;
 		sum2[cafe[nny][nnx]] = 1;
-		// ¿ŞÂÊ ¾Æ·¡
+		// ì™¼ìª½ ì•„ë˜
 		int ny = nny, nx = nnx;
 		bitset<100> sum1 = sum2;
 		for (int i = 0; i < leftCounter; i++) {
@@ -136,7 +136,7 @@ int b(int y, int x) {
 
 /*
 
-n * n ¿¡¼­ ÃÖ´ë·Î °¡´ÉÇÑ¼ö
+n * n ì—ì„œ ìµœëŒ€ë¡œ ê°€ëŠ¥í•œìˆ˜
 n = 20;
 
 [3]		4
@@ -152,7 +152,7 @@ T X T X T X
 X T X T X T
 T X T X T X
 
-Y ¿¡¼­ °¡´ÉÇÑ °æ¿ìÀÇ ¼ö t
+Y ì—ì„œ ê°€ëŠ¥í•œ ê²½ìš°ì˜ ìˆ˜ t
 	T
   Y T T
 T T t t T

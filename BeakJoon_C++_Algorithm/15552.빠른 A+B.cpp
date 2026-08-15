@@ -1,4 +1,4 @@
-/// 15552.ºü¸¥ A+B
+/// 15552.ë¹ ë¥¸ A+B
 
 #include <iostream>
 #include <cstdio>

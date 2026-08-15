@@ -1,4 +1,4 @@
-/// 2352¹İµµÃ¼ ¼³°è
+/// 2352ë°˜ë„ì²´ ì„¤ê³„
 
 #include <iostream>
 #include <algorithm>

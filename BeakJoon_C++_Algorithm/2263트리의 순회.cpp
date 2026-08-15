@@ -1,4 +1,4 @@
-/// 2263Æ®¸®ÀÇ ¼øÈ¸
+/// 2263íŠ¸ë¦¬ì˜ ìˆœíšŒ
 
 #include <iostream>
 #include <vector>
@@ -28,7 +28,7 @@ int main()
 }
 
 void preorder(int i_left, int i_right, int p_left, int p_right) {
-	// inoder¿¡¼­ node¸¦ Ã£¾Æ³»¾î left right·Î ³ª´®
+	// inoderì—ì„œ nodeë¥¼ ì°¾ì•„ë‚´ì–´ left rightë¡œ ë‚˜ëˆ”
 
 	int root = postorder[p_right - 1];
 	cout << root << " ";

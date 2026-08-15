@@ -1,4 +1,4 @@
-/// 9466ер га╥на╖ф╝
+/// 9466М┘─ М■└К║°Л═²М┼╦
 
 #include <iostream>
 #include <vector>

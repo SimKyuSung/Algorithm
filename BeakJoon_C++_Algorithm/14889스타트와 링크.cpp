@@ -1,4 +1,4 @@
-/// 14889��ŸƮ�� ��ũ
+/// 14889스타트와 링크
 
 #include <iostream>
 #include <vector>

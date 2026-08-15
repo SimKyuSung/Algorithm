@@ -1,4 +1,4 @@
-/// 1342.Çà¿îÀÇ ¹®ÀÚ¿­
+/// 1342.í–‰ìš´ì˜ ë¬¸ìì—´
 
 #include <iostream>
 #include <algorithm>
