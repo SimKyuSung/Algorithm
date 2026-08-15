@@ -1,0 +1,4 @@
+# 루트 .gitignore 의 *.txt 는 Visual Studio 기본 설정에서 딸려온 잔재다.
+# 채점 입력은 kata 의 일부이므로 여기서 예외로 뚫어둔다.
+# 이 위치에 두면 앞으로 추가되는 kata 에도 자동으로 적용된다.
+!sample_input.txt
