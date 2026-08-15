@@ -11,9 +11,23 @@
     // 확장이 임의로 만들어내는 빌드/디버그 설정에 끌려가지 않도록 꺼둔다.
     "C_Cpp.debugShortcut": false,
 
+    // 자동완성이 뜨면 무엇을 쓸지 정하기 전에 손이 먼저 나가서
+    // 설계를 머리에서 끝내는 습관이 안 든다. 그래서 자동으로 뜨는 것만 끈다.
+    // 시험장 Visual Studio 에는 IntelliSense 가 켜져 있으므로 파라미터 힌트는 남기고,
+    // 정말 필요할 때는 Ctrl+Space 로 직접 부른다.
     "[cpp]": {
         "editor.tabSize": 4,
-        "editor.insertSpaces": true
+        "editor.insertSpaces": true,
+
+        "editor.quickSuggestions": {
+            "other": false,
+            "comments": false,
+            "strings": false
+        },
+        "editor.suggestOnTriggerCharacters": false,
+        "editor.tabCompletion": "off",
+        "editor.suggest.showWords": false,
+        "editor.snippetSuggestions": "none"
     },
 
     "files.trimTrailingWhitespace": true,
