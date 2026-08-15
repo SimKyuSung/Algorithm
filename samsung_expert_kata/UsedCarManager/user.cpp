@@ -29,6 +29,7 @@ struct FILTER
 
 static const int age_range = 20;
 static const int passenger_range = 11;
+static const int sub_bucket_size = 34;
 
 // static vector<CAR> inventory[age_range][passenger_range];
 
@@ -37,16 +38,33 @@ static const int passenger_range = 11;
 // int vector_max_size_test = 0;
 static const int vector_max_size = 1500;
 
-static CAR inventory[age_range][passenger_range][vector_max_size];
-static int inventorySize[age_range][passenger_range];
+// static CAR inventory[age_range][passenger_range][vector_max_size];
+// static int inventorySize[age_range][passenger_range];
 
+static CAR inventory_v2[age_range][passenger_range][sub_bucket_size][200];
+static int inventorySize_v2[age_range][passenger_range][sub_bucket_size];
+
+int bucket_size_max_test = 0;	// 154
 
 // car 를 구매하여 재고에 넣는다.
 void buy(CAR car)
 {
+	// test version
 	// inventory[car.age][car.passenger - 2].push_back(car);
 	// vector_max_size_test = max(vector_max_size_test, (int)inventory[car.age][car.passenger - 2].size());
-	inventory[car.age][car.passenger - 2][inventorySize[car.age][car.passenger - 2]++] = car;
+
+	// send version v1
+	// inventory[car.age][car.passenger - 2][inventorySize[car.age][car.passenger - 2]++] = car;
+
+	// send version v2
+	int &age = car.age;
+	int passenger = car.passenger - 2;
+	int engine_bucket = (car.engine - 1000) >> 7; // Divide engine by 128
+	int &bucket_size = inventorySize_v2[age][passenger][engine_bucket];
+	inventory_v2[age][passenger][engine_bucket][bucket_size++] = car;
+	// if (bucket_size > bucket_size_max_test) {
+	// 	bucket_size_max_test = bucket_size;
+	// }
 }
 
 // filter 의 조건에 해당하는 차를 판매하여 재고에서 비운다.
@@ -131,18 +149,40 @@ int sell(void)
 			// 		--it;
 			// 	}
 			// }
-			for (int k = 0; k < inventorySize[i][j]; ++k) {
-				CAR& car = inventory[i][j][k];
-				if (car.engine >= filter_engine.from &&
-					car.engine <= filter_engine.to &&
-					car.price >= filter_price.from &&
-					car.price <= filter_price.to) {
-					order_car_list[order_number % 100][order_size++] = car;
 
-					// 예쁘게 삭제하기 (순서 유지 필요 없음, 맨마지막 값을 현재 위치로 옮기고 사이즈 감소)
-					inventory[i][j][k] = inventory[i][j][inventorySize[i][j] - 1];
-					--inventorySize[i][j];
-					--k; // Adjust index after removal
+			// send version v1
+			// for (int k = 0; k < inventorySize[i][j]; ++k) {
+			// 	CAR& car = inventory[i][j][k];
+			// 	if (car.engine >= filter_engine.from &&
+			// 		car.engine <= filter_engine.to &&
+			// 		car.price >= filter_price.from &&
+			// 		car.price <= filter_price.to) {
+			// 		order_car_list[order_number % 100][order_size++] = car;
+
+			// 		// 예쁘게 삭제하기 (순서 유지 필요 없음, 맨마지막 값을 현재 위치로 옮기고 사이즈 감소)
+			// 		inventory[i][j][k] = inventory[i][j][inventorySize[i][j] - 1];
+			// 		--inventorySize[i][j];
+			// 		--k; // Adjust index after removal
+			// 	}
+			// }
+
+			// send version v2
+			int start_bucket = (filter_engine.from - 1000) >> 7; // Divide by 128
+			int end_bucket = (filter_engine.to - 1000) >> 7; // Divide by 128
+			for (int k = start_bucket; k <= end_bucket; ++k) {
+				for (int l = 0; l < inventorySize_v2[i][j][k]; ++l) {
+					CAR& car = inventory_v2[i][j][k][l];
+					if (car.engine >= filter_engine.from &&
+						car.engine <= filter_engine.to &&
+						car.price >= filter_price.from &&
+						car.price <= filter_price.to) {
+						order_car_list[order_number % 100][order_size++] = car;
+
+						// 예쁘게 삭제하기 (순서 유지 필요 없음, 맨마지막 값을 현재 위치로 옮기고 사이즈 감소)
+						inventory_v2[i][j][k][l] = inventory_v2[i][j][k][inventorySize_v2[i][j][k] - 1];
+						--inventorySize_v2[i][j][k];
+						--l; // Adjust index after removal
+					}
 				}
 			}
 		}
@@ -184,7 +224,15 @@ void refund(int order_number)
 	int target_order_index = order_number % 100;
 	for (int i = 0; i < order_car_list_size[target_order_index]; ++i) {
 		CAR& car = order_car_list[target_order_index][i];
-		inventory[car.age][car.passenger - 2][inventorySize[car.age][car.passenger - 2]++] = car;
+		// send version v1
+		// inventory[car.age][car.passenger - 2][inventorySize[car.age][car.passenger - 2]++] = car;
+
+		// send version v2
+		// int &age = car.age;
+		// int passenger = car.passenger - 2;
+		// int engine_bucket = (car.engine - 1000) >> 7; // Divide engine by 128
+		// inventory_v2[age][passenger][engine_bucket][inventorySize_v2[age][passenger][engine_bucket]++] = car;
+		buy(car); // Use the buy function to add the car back to inventory
 	}
 
 }
@@ -206,9 +254,17 @@ int empty(void)
 
 	for (int i = 0; i < age_range; ++i) {
 		for (int j = 0; j < passenger_range; ++j) {
-			car_count += inventorySize[i][j];
-			inventorySize[i][j] = 0; // Reset the inventory size for each age and passenger combination
+			// send version v1
+			// car_count += inventorySize[i][j];
+			// inventorySize[i][j] = 0; // Reset the inventory size for each age and passenger combination
+
+			// send version v2
+			for (int k = 0; k < sub_bucket_size; ++k) {
+				car_count += inventorySize_v2[i][j][k];
+				inventorySize_v2[i][j][k] = 0; // Reset the inventory size for each age, passenger, and engine bucket combination
+			}
 		}
 	}
+	// printf("bucket_size_max_test: %d\n", bucket_size_max_test);
 	return car_count;
 }
