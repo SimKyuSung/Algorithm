@@ -1,0 +1,8 @@
+# 빌드 산출물
+shelter
+shelter_release
+optimal
+
+# 중간 버전(로컬 보관용). 풀이 과정은 solveHistory.md 에 남아 있으므로 코드는 안 남긴다.
+user_v1.cpp
+user_v2.cpp
