@@ -263,3 +263,6 @@ __pycache__/
 *.filters
 *.vcxproj
 *.txt
+
+# run.sh 빌드 산출물
+/.build/
